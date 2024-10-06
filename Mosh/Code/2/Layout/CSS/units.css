@@ -1,0 +1,65 @@
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+}
+
+body {
+    margin: 10px;
+}
+
+.first {
+    height: 200px;
+    width: 200px;
+    background-color: gold;
+    border: 5px solid orange;
+    /*
+    - Here, the width and height of the div remains constant even if we open the website in mobile, laptop, etc.
+    - It is used to create borders because we don't want borders to change with the change in screen size.
+    */
+}
+
+.second {
+    background-color: gold;
+    height: 100vh;
+    /*
+    - The height of a block-level element is 0 by default and its width is 100% of the available width.
+    - As we add content in it, its height increases so as to fit the content inside it.
+    - So, here the height of body element is zero. That's why the height of the div also became zero when it is said to 100%.
+    - In these cases, we use viewport units.
+    - 50vw: 50% of viewport's width.
+    */
+    width: 50%;
+    /* 
+    - This means 50% of the width of parent element(body element) 
+    - body is a block-level element so it occupies entire available width i.e. 100% of the available width.
+    - In this case, as the screen size decreases the size of the box also decreases.
+    - Using relative units, we can create layouts which can adjust as per the screen size.
+    */
+    border-top: 5px solid orange;
+}
+
+.third {
+    height: 300px;
+    width: 10em;
+    /*
+    - This means 10 times the font size of current element.
+    - Here, this div does not have a font-size so it will inherit from body element but body element also does not have a font-size so it will inherit from html element.
+    - The font-size for html element given by browser, by default is 16px.
+    - So, the width of the div = 10 * 16px = 160px
+    */
+    background-color: bisque;
+}
+
+.fourth {
+    height: 300px;
+    width: 10rem;
+    /*
+    - To remove this complication of tracing the hierarchy of elements to find out the font-size, we use rem unit.
+    - 10rem means 10 times the font-size of the root element.
+    - So width = 10 * 16px = 160px
+    - To make our calculation easier we can set font-size of html element to 62.5%
+    - Use of rem and em: If in a user's device font-size is smaller or bigger than 16px then the width of this div becomes smaller and bigger as per the size of the font to fit same number of words in one line.
+    - Note: There is no such thing as the best unit. It completely depends on our use-case.
+    */
+    background-color: bisque;
+}

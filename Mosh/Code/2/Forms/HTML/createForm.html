@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create Form</title>
+        <link rel="stylesheet" href="../CSS/normalize.css">
+        <link rel="stylesheet" href="../CSS/createForm.css">
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+            </div>
+            <div class="form-group"> 
+                <label for="email">Email</label>
+                <input type="email" id="email" />
+            </div>
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </form>
+        <!--
+        - Every form contains one or more input fields or form controls.
+        - To add input fields, we use input element.
+        - To add labels to them we use label element instead of a p element.
+        - By using p element, the input field comes on a next line with a space between label and field.
+        - So, the label seems somewhat disconnected from the field.
+
+        - Using 'for' attribute, we can associate the label with the input field.
+        - So, we assign for attribute with the id of input field.
+        - As a result, when we click Name, the input field gets highlighted.
+        - So, it makes our forms more accesible and interative.
+
+        - As we set the type to email, we get basic validation.
+        - So, if we try to submit the form without adding a valid email address, we will get an error.
+        - To lay the fields vertically, we can wrap separate fields in separate divs.
+
+        - Each button has a type.
+        - submit: used to submit the form.
+        - reset: reset the form.
+        -->
+    </body>
+</html>

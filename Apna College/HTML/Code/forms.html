@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Student Details</h1>
+
+        <form action="/action.php">
+            <!--
+            - Forms are used to collect data from the user.    
+            - 'action' attribute contains the URL to which the data of the form will be sent when the form is submitted.
+
+            - Elements in forms:
+            - 'input' used to take different type of inputs from user.
+            -->
+            <input type="text" placeholder="Enter name" />
+            <br /><br />
+            <input type="password" placeholder="Enter password" />
+            <br />
+            <h4>Select your class:</h4>
+            <input type="radio" value="11th" name="class" />11th
+            <br />
+            <input type="radio" value="12th" name="class" />12th
+            <!-- 
+            - 'name' attribute defines what data we are taking as input (eg: class, username, etc.)
+            - Value attribute holds the actual data associated with name (eg: 11th, Sansita)            
+            - Radio buttons with same 'name' value are grouped together and hence it allows to select only one option out of multiple options 
+             
+            - When we want class of a student we will write name = "class" and value = "11th". In this way the student can select any one option and when the form will be submitted the name and value will be sent to server in pair i.e class = 11th 
+            - Value and data which is displayed on webpage using label tag both should be same because the server can't see the data which is displayed instead the data which is written in value attribute is sent to server
+            -->
+
+            <br /><br />
+            <label for="percentage">
+                Enter the percentage of the class selected :
+            </label>
+            <input type="number" id="percentage" name="percentage" />
+            <!--
+            Labels are used to provide labels or assign a name to a particular input element.
+            Here, the label tag is associated with the input element using 'for' attribute.
+            'id' attribute assigns an identifier to an element 
+            The value of 'for' attribute and 'id' attribute should be same. 
+
+            Uses: 
+            1. Screen readers announces the labels to the visually impaired users so that they can understand the purpose of that element.
+            2. When we click on a label it points out or highlights the input element (selects the option in case of radio buttons) so it helps users to easily navigate through the website
+
+            - Placeholder attribute should be used when we want to give brief hint to user about the input element whereas Label tag should be used to give more descriptive info 
+            -->
+
+            <br />
+            <!-- Labels with radio buttons -->
+            <h4>Select your gender:</h4>
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Male</label>
+            <br />
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label>
+
+            <!--
+            - Class attribute: It is used to group different elements so that multiple elements can be styled using css at once.
+            - It is reusable i.e it can be applied to multiple elements whereas id of each element should be unique.
+            -->
+
+            <br />
+            <h4>Select your subjects:</h4>
+            <input type="checkbox" name="subject" id="maths" />
+            <label for="maths">Maths</label>
+            <br />
+            <input type="checkbox" name="subject" id="phy" />
+            <label for="phy">Physics</label>
+            <br />
+            <input type="checkbox" name="subject" id="chem" />
+            <label for="chem">Chemistry</label>
+            <br />
+            <input type="checkbox" name="subject" id="cs" />
+            <label for="cs">Computer Science</label>
+            <br />
+
+            <!-- To add dropdowns, we use 'select' tag -->
+            <h4>Select your city:</h4>
+            <select name="city" id="city">
+                <option value="delhi">Delhi</option>
+                <option value="jaipur">Jaipur</option>
+                <option value="pune">Pune</option>
+                <option value="noida">Noida</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+            <br /><br /><br />
+
+            <!-- To provide an area or box where user can write feedback, we can use textarea tag -->
+            <textarea
+                name="feedback"
+                id="feedback"
+                placeholder="Please, enter your valuable feedback here."
+                rows="5"
+                cols="60"
+            ></textarea>
+            <br /><br />
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* 
+    - By default, it's value is set to content-box. That's why width and height properties are only applied to content box.
+    - When it is set to border-box, then the specified width and height includes the specified padding and border width i.e. specified width = (content width) + (2 * padding width) + (2 * border width)
+    - So, the height and width of content box is adjusted accordingly. 
+
+    - Universal selector (*) does not selects
+    pseudo-elements like ::before ::after.
+    - So, we have to add them *::before and *::after to select them.
+    */
+}
+/* This selects all the elements as well as all the elements which are inserted before or after any element. */
+
+body {
+    margin: 10px;
+}
+
+/*
+- By default, width and height properties are applied to content box.
+- If some padding or border is applied to the div then that is added to the specified width and height.
+- As a result, its visible region increases i.e. it will appear bigger.
+- But the margin property only moves the div away or towards other elements. 
+- Due to this, calculating the actual size of the div can be a little difficult.
+- That's why we use box-sizing property.
+*/
+
+.box::before {
+    content: "Hello";
+}
+/* Inserts the text 'Hello' before the content of the div */
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    padding: 20px;
+    border: 10px solid gold;
+    /*
+    1. When box-sizing: content-box;
+        - The size of the content is 100 * 100px.
+        - But the actual size of div is 160 * 160px due to padding and border.
+
+    2. When box-sizing: border-box;
+        - The size of content is 40 * 40px.
+        - The actual size of div is 100 * 100px.
+    */
+}
+
+.span-box {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    display: inline-block;
+}
+/*
+- Height and Width properties are not applied to
+inline elements.
+- They only take up as much width as their content requires, and their height is determined by the line height and the content.
+- So, to give them width and height we use display property.
+- For inline elements, it is set to inline by default but we can change it and set it to 'inline-block'.
+- As a result, we can set its height and width just like block-level elements and also it will not start from a new line just like inline elements.
+
+- There is a space between these two span elements because in html code we have written the second span on a new line so the spaces between both of them gets normalized into a single space.
+- So, to remove that space we have to write both the elements in html one after the another.
+
+- But width and height properties are applicable to img element (which is an inline and an empty element).
+- This happens because although img element is an inline element but is also a replaced element i.e. its content is replaced by an externel source.
+- These have their own intrinsic dimensions based on the image size.
+- When we set their height and width property, those properties override the intrinsic dimensions.
+- Hence, allowing us to control its dimensions.
+*/

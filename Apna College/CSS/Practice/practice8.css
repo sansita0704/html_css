@@ -1,0 +1,18 @@
+div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid #546A7B;
+    border-left: 10px solid #C6C5B9;
+    animation: loader 1s 0s infinite normal;
+    margin: 200px;
+}
+
+@keyframes loader {
+    to {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}

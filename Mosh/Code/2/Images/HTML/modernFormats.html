@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modern Formats</title>
+    </head>
+    <body>
+        <!--
+        • Coversion to WebP
+        - Photoshop (WebPShop plug-in)
+        - Sketch
+        - Online tools (https://cloudconvert.com/jpg-to-webp)
+        - Command-line tools: automate the process for converting to WebP.
+        -->
+
+        <img src="../Images/meal.jpg" alt="" />
+        <img src="../Images/meal.webp" alt="" />
+        <!--
+        - WebP images are lot more smaller than jpeg and png.
+        - They are slightly blurry than jpeg but the difference is negligible.
+        -->
+
+        <picture>
+            <!--
+            - picture element can contain one or more source elements.
+            - It contains one img element.
+            -->
+            <source type="image/webp" srcset="../Images/meal.webp" />
+            <source type="image/jpeg" srcset="../Images/meal.jpg" />
+            <!--
+            - In type attribute we specify type of media/ its subtype.
+            - In srcset attribute, we can add different versions of the image for different DPR.
+            -->
+
+            <img src="../Images/meal.jpg" alt="A bowl of salmon and curry" />
+            <!--
+            - We are adding img element for two reasons:
+
+            1. We will add alternative text here.
+            2. To support browsers which does not support picture and source elements.
+            -->
+        </picture>
+    </body>
+</html>

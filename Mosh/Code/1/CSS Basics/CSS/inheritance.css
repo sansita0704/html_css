@@ -1,0 +1,25 @@
+body {
+    margin: 10px;
+}
+
+p {
+    color: dodgerblue;
+    border: 1px black solid;
+}
+/*
+Inheritance:
+- The child elements inherit some properties from their parent element.
+- Here, the strong element inherits color property from its parent element i.e. p element.
+- Some of the properties do not get inherited.
+- e.g. - border property
+- Generally, the property which deals with the typography, alignment of text, etc. are inherited.
+*/
+
+strong {
+    color: initial;
+    border: inherit;
+}
+/* 
+- To stop the inheritance, we can set color property to initial.
+- To explicitly enable inheritance for border property, we can set border property to inherit.
+*/

@@ -1,0 +1,37 @@
+div {
+    background-color: pink;
+    display: inline-block;
+    /* 
+    When we set a block element to display : inline then we can't set height, width and margin from top and bottom
+    So, to set these properties, we use display type 'inline-block' so that element behaves like inline element and we can set these properties for it as well
+    */
+    margin: 25px;
+    padding: 25px;
+    /* changes div (a block element) to an inline element */
+}
+
+button {
+    display: block;
+}
+
+#blue {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    visibility: hidden;
+    /* Space is reserved for blue box */
+}
+
+#green {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    display: none;
+    /* No space is reserved for green box, instead yellow box took its place */
+}
+
+#yellow {
+    height: 100px;
+    width: 100px;
+    background-color:  rgba(255, 0, 0, 0.5);
+}

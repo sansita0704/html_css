@@ -1,0 +1,69 @@
+body {
+    margin: 10px;
+}
+
+article .first {
+    font-size: 30px;
+    font-style: italic;
+}
+/* Selects all the elements with the class 'first' which are descendents of the article element */
+
+/*
+We can do same styling without assigning class to that paragraph using pseudo-class selectors.
+
+Pseudo-class:
+- They are classes which are assigned to the elements by the browsers automatically.
+- All pseudo-classes start with a colon.
+
+- Used to select an element in a particular state.
+- e.g. - :hover, :active, :visited
+*/
+
+article :first-child {
+    font-size: 30px;
+    font-style: italic;
+}
+/* 
+- Selects first child of the article element and also first child of an element inside article element whether it is of any type.
+- But it can be fragile, because if we add a heading before p element then the style will only apply to heading i.e. if we move around content then our css styles would break.
+*/
+
+article :first-of-type {
+    font-size: 30px;
+    font-style: italic;
+}
+/* Selects first occurence of different type of element */
+
+article > :first-child {
+    font-style: normal;
+}
+/* Selects first direct child of the article element whether it is of any type */
+
+article p:first-of-type {
+    font-size: 30px;
+    font-style: italic;
+}
+/* Selects first occurence of p element */
+
+article p:last-child {
+    font-weight: bold;
+}
+/* Selects that p element which is the last child of article element */
+
+article > ul:first-of-type li:nth-child(odd) {
+    color: deeppink;
+}
+/* Selects odd positioned li elements of the first ul element which is direct child of article element */
+
+a:visited {
+    color: dodgerblue;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:hover, a:focus{
+    color: pink;
+}
+/* focus: When the user clicks on an element or selects it with the tab key */

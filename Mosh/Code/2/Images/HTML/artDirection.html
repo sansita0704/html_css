@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Art Direction</title>
+    </head>
+    <body>
+        <!--
+        • Art Direction
+        - Displaying a zoomed-in or cropped version of an image for certain screen sizes.
+        -->
+
+        <picture>
+            <source
+                media="(max-width: 500px)"
+                srcset="../Images/meal-cropped.jpg"
+            />
+            <!-- For mobile phones i.e. width <= 500px -->
+
+            <source media="(min-width: 501px)" srcset="../Images/meal.jpg" />
+            <!-- For width > 500px -->
+
+            <img src="../Images/meal.jpg" alt="" />
+        </picture>
+    </body>
+</html>

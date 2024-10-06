@@ -1,0 +1,53 @@
+body {
+    margin: 10px;
+}
+
+/* 
+Relational selectors:
+- They are used to select elements on the basis of their relation with some other element.
+- They are written by combining more than one selector and adding a combinator in between them.
+- They are useful because by using them, we do not have to assign id or class to different elements for styling and hence makes our HTML code cleaner.
+
+Their problems:
+- They can be fragile i.e. if we move around elements then the styles would break.
+- They are not as fast as basic selectors but the difference is negligible. This happens because in case of below code:
+#products ~ p {
+    color: blueviolet;
+}
+browsers first selects all the p elements and then checks for all the elements that if they come after the specified element or not. 
+*/
+
+/*
+Combinators are used to define relationship between selectors.
+
+Types of Combinators:
+
+1. Descendant combinator (space)
+    - Selects all the elements that are descendents of the specified element, not only direct child. 
+2. Child combinator (>)
+    - Selects all the elements that are direct children of the specified element.
+3. Next-sibling combinator (or Adjacent sibling) (+)
+    - Selects only that element which is written just after the specified element.
+4. General sibling combinator (tilde '~')
+    - Selects all general siblings of the specified element.
+*/
+
+#products p {
+    color: orange;
+}
+/* Selects all p elements written inside an element which has an id of products even when that p element is not the direct child of the specified element */
+
+#products > p {
+    color: red;
+}
+/* Selects all p elements which are direct child of the element which has an id of products */
+
+#products + p {
+    color: blue;
+}
+/* Selects only that p element that is coming just after the element that has an id of products */
+
+#products ~ p {
+    color: blueviolet;
+}
+/* Selects all those p elements which comes after the element that has an id of products */

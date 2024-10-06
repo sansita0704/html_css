@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dropdowns</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+        <link rel="stylesheet" href="../CSS/dropdowns.css" />
+    </head>
+    <body>
+        <form>
+            <select multiple>
+                <!--
+                - id attribute is used to associate this input field with label element.
+                - name attribute is used while submitting the form to the server.
+
+                - Inside this select element, we can have multiple option elements.
+                -->
+
+                <option value="">Select a Course..</option>
+                <option value=""></option>
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">JS</option>
+                <!--
+                - We can left the 1st option empty so that user has a choice of filling this dropdown.
+                - Or we can add the text 'Select a Course..'
+
+                - 'selected' attribute (boolean attribute): To select an option by default.
+                - 'multiple' attribute (boolean attribute): To allow the user to select the multiple option.
+                -->
+            </select>
+
+            <select>
+                <optgroup label="Front-end Courses">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JS</option>
+                </optgroup>
+                <optgroup label="Back-end Courses">
+                    <option>Node.js</option>
+                    <option>ASP.NET</option>
+                    <option>Django</option>
+                </optgroup>
+            </select>
+        </form>
+    </body>
+</html>

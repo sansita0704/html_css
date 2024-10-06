@@ -1,0 +1,26 @@
+p {
+    text-align: center;
+    font-family: cursive;
+    font-size: larger;
+    line-height: 40px;
+    text-transform: capitalize;
+}
+
+h1 {
+    text-align: center;
+    /* start : same as left if direction is left-to-right and right if direction is right-to-left. (vice-versa for end) */
+    text-decoration: red wavy underline;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+    /* Fall back mechanism: If one browser can't apply lucida sans then lucida sans regular will be applied and so on */
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#head2 {
+    font-weight: 100;
+}

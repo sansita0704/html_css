@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+div {
+    display: inline-block;
+}
+
+#trafficLight {
+    height: 460px;
+    width: 150px;
+    background-color: black;
+    border-radius: 600px;
+}
+
+.light {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}

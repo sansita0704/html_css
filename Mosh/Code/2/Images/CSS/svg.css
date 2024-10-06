@@ -1,0 +1,12 @@
+body {
+    background: url(../Images/constellation.svg);
+}
+
+.ufo {
+    width: 100px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: aliceblue;
+}

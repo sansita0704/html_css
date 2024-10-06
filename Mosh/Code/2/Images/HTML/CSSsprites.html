@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Sprites</title>
+        <link rel="stylesheet" href="../CSS/CSSsprites.css" />
+    </head>
+    <body>
+        <img src="../Images/dishes.png" alt="An icon of a dish." />
+        <img src="../Images/landing.png" alt="An icon of a parachute." />
+        <img src="../Images/rocketship.png" alt="An icon of a rocket." />
+        <img src="../Images/saturn.png" alt="An icon of a saturn." />
+        <img src="../Images/ufo.png" alt="An icon of a ufo." />
+        <!--
+        Problem:
+        - The browser sends separate HTTP requests to the server.
+        - If we have tons of images and millions of concurrent users, then all the users will send HTTP requests to the server.
+        - This will cause a lot of overhead on the server.
+        
+        - To solve this we can use a technique called CSS sprites.
+        - We will combine all these images into a single image and then we only have to send 1 HTTP request to the server to get the images.
+        -->
+
+        <br />
+        <span class="bg-dishes"></span>
+        <span class="bg-landing"></span>
+        <span class="bg-rocketship"></span>
+        <span class="bg-saturn"></span>
+        <span class="bg-ufo"></span>
+
+        <!--
+        - We should not always use CSS Sprites:
+        1. File size can be too large.
+        2. Sprites are not flexible because if we need to replace one image then we have to generate the sprite again.
+
+        - So, we should use them for small-sized images like logos or icons.
+        -->
+    </body>
+    <!-- 
+    - flaticon.com: find millions of vector icons
+    - Search "CSS sprites generator" on chrome and use any website to create a css sprite.
+    -->
+</html>

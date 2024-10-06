@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+Mainly, there are 3 categories of the font for the web:
+
+1. Serif: 
+    - They have small line or a stroke at the ends of the characters.
+    - They look more professional and serious.
+    - Used in books, newspapers, magazines, etc.
+    - Popular fonts are Georgia and Times New Roman.
+2. Sans-serif:
+    - They do not have that small line or stroke.
+    - They are more playful and modern.
+    - Popular fonts are Avenir, Arial, Futura, Helvetica and Roboto
+3. Monospace:
+    - 'Mono' means 'one' so 'monospace' means 'one space'.
+    - Here, width of all the characters is exactly same.
+    - Used to display quotes because we want perfectly aligned characters in it.
+    - Popular fonts are Consolas, Courier and Ubuntu
+*/
+
+p {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /*
+    - When we press control + space, VS code suggests some fonts.
+    - These are called Web Safe Fonts because these are the fonts which are available on mostly all the computers so it is safe to use them.
+
+    - We type a font stack for the value of this property.
+    - Font stack consists a bunch of fonts.
+    - Browser first checks for arial. If it is installed on the user's computer then arial font will be applied on p element.
+    - But, if it is not there then it will check for helvetica and will repeat same process.
+    - At last, we always write a generic font(like serif, sans-serif or monospace) and let the browser decide what font should be used. 
+
+    - To apply this same font family to all the elements we use inheritance in CSS.
+    - We define font-family for body element and let other elements inherit it.
+    */
+
+    font-weight: normal;
+    /* Used to set the boldness of the font. */
+
+    font-style: italic;
+    font-size: 20px;
+    color: #333;
+    /*
+    - If the first three digits of the hex code are same as last three digits then we can short our code by writing only those three digits.
+    - It is best to color the font of the paragraph dark grey so there is a clear difference between headings and paragraph.
+    */
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    /*
+    - To change the font of h1 we write different rule for it.
+    - Times New Roman is written in quotes because the font name contains space.
+    */
+}

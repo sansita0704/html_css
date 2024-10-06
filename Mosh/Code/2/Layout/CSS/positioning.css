@@ -1,0 +1,85 @@
+body {
+    margin: 10px;
+    height: 200vh;
+}
+
+.boxes {
+    border: 3px solid lightgrey;
+    position: relative;
+}
+
+.box {
+    width: 5rem;
+    height: 5rem;
+}
+
+.box-one {
+    background-color: gold;
+    /*
+    position: relative;
+    left: 4rem;
+    top: 2rem;
+    z-index: -1;
+    /* 
+    - 'position' property is used to position an element on the webpage.
+    - By default, it is set to static.
+    - 'static': The element is not positioned. It is on that place where it is placed by the browser.
+    - 'relative': The element is positioned relative to its normal position.
+        - Other elements are not affected, they remain on their normal place only.
+
+    To position the element we use:
+
+    1. 'left' property: 
+        - Used to add space on left side of an element i.e. moves it to right side.
+        - It can take both positive and negative values.
+        - When it is set to a negative value then it adds space on right side of the element i.e. moves it to left side.
+    2. 'right' property:
+        - Same as setting left property to negative value.
+    3. 'top' property
+    4. 'bottom' property
+    5. 'z-index' property: 
+        - Used to position the element along z-axis and hence helps in stacking of elements on one-another.
+        - By default, it is set to 0.
+        - Elements with positive value of z-index moves towards us.
+        - Elements with negative value of z-index moves away from us.
+    */
+}
+
+.box-two {
+    background-color: tomato;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /*
+    'absolute': 
+    - The element is positioned relative to its container element or parent element.
+    - It is removed from the normal document flow (default layout of the webpage by the browser) or the space for that element is removed and all the remaining elements are laid out as if that element does not exist. 
+    - We can say that from its parent's point of view it does not exist.
+    - We can imagine it to be on a separate layer. 
+
+    Note: To position an element relative to its container, the container must be positioned
+    relatively.
+    */
+}
+
+.box-three {
+    background-color: dodgerblue;
+    position: fixed;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    /*
+    'fixed':
+    - The element is removed from the normal document flow.
+    - The element is positioned relative to viewport.
+    - It is often used to create navbars.
+
+    We can size the positioned elements in two ways:
+
+    1. Using width and height properties 
+    2. Using left and right properties
+    */
+
+    width: auto;
+    /* Browser decides how much width should this element have leaving 2rem space on both left and right side */
+}

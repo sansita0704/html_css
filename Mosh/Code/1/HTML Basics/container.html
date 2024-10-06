@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Containers</title>
+        <style>
+            .product {
+                background-color: aquamarine;
+                width: 600px;
+            }
+            /* Writing only class name allows us to change the container anytime in future */
+
+            .highlight {
+                background-color: blueviolet;
+            }
+
+            img.post {
+                height: 300px;
+            }
+
+            .post {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        In HTML, different type of containers are used to group elements so that similar CSS styles can be applied on them.
+
+        1. div (division)
+            - doesn't have any visual appearance 
+            - block-level element i.e. always start with a new line and fills up entire available width
+
+        2. span
+            - inline element 
+
+        Note: div and span elements are generic elements i.e. they don't have a specific meaning or role. They are only used to group elements, structure page and apply css styles.
+        -->
+
+        <div class="product">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+                officia. Eos dolorem incidunt molestias, iste obcaecati
+                doloribus tenetur possimus quis, aliquid voluptatum reiciendis
+                numquam iusto voluptatibus porro adipisci amet dignissimos.
+            </p>
+            <a href="#">Link</a>
+        </div>
+        <div>
+            <p>
+                <span class="highlight">Lorem</span>ipsum dolor sit amet
+                consectetur adipisicing elit. Sint, officia. Eos dolorem
+                incidunt molestias, iste obcaecati doloribus tenetur possimus
+                quis, aliquid voluptatum reiciendis numquam iusto voluptatibus
+                porro adipisci amet dignissimos.
+            </p>
+            <a href="#">Link</a>
+        </div>
+
+        <!--
+        Semantic elements: 
+        - These elements are more descriptive and meaningful.
+        - Helps search engines better understand our page and content.
+        
+        Some examples: 
+        1. article: It can contain any independent or self-contained content like product cards or user's comments or reviews. 
+        2. figure: container for figures 
+            - It does not contain any characters
+            - Can add a caption also (optiona) above or below the image using 'figcaption' element
+        3. mark: to highlight some text
+            - By default, highlights in yellow
+        4. time: to add date and time 
+            - 'datetime' attribute can be used to add machine readable date and time which can help search engines extract information from our page.
+        -->
+
+        <article class="post">
+            <h1>Heading</h1>
+            <p>
+                Published
+                <time datetime="2024-01-01 17:00">January 1 2024 5:00 pm</time>
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+                optio harum, assumenda blanditiis temporibus tenetur, inventore
+                reiciendis molestias voluptates, quasi quibusdam? Cum quos quo
+                nam consectetur tenetur assumenda voluptas nobis dolores harum
+                animi. Saepe, molestias asperiores numquam blanditiis obcaecati
+                illum!
+            </p>
+            <br />
+            <figure>
+                <figcaption class="post">
+                    My <mark>coffee</mark> this morning
+                </figcaption>
+                <br />
+                <img src="../../images/coffee.jpg" alt="" class="post" />
+            </figure>
+        </article>
+
+        <!-- 
+        Shortcuts: 
+        To copy a paragraph: select it > shift + option + down arrow 
+        To get two cursors to edit two same words simultaneously: select the word > command + D
+        -->
+    </body>
+</html>

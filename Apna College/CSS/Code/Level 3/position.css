@@ -1,0 +1,61 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+h1 {
+    position: sticky;
+    /* 
+    present in document flow and is positioned according to user's scroll position 
+    used to create navigation bars
+    */
+    top: 0;
+    /* remains to its default position until it reaches the specified 'top' position and then remains fixed on that position */
+    background-color: bisque;
+    text-align: center;
+    /* by default, the element which is return after the elements comes above those elements */
+    z-index: 1;
+    /* all other elements have z-index: 0 so h1 comes above each element */
+}
+
+#box1 {
+    position: static;
+    /* Default position i.e. no properties will be applied */
+    top: 10px; /* not applicable */
+    background-image: url(/CSS/images.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+    Cover (most used): Image will cover the box completely, leaving no spaces. Here, some part of the image may not be visible
+    Contain: Image will be visible completely in the box and if any space is left it will repeat itself
+    Auto: default
+    */
+}
+
+#box2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    /* Position changes with respect to its default position */
+}
+
+#box5 {
+    position: absolute;
+    /* positioned relative to its closest positioned (i.e. its position property is set any value other than static) ancestor (which is box2 in this case) */
+    top: 20px;
+    right: 30px;
+    /* positions w.r.t. box2 and gets removed from document flow */
+}
+
+#box3 {
+    position: fixed;
+    /* removed from document flow i.e. it is visible on webpage but its position is not reserved, the element written next to it occupies its position */
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 30px;
+    /* positions w.r.t. viewport and remains fixed at that particular position so can be used for headers, navbars or footers */
+}

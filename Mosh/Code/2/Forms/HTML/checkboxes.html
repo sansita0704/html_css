@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkboxes</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+        <link rel="stylesheet" href="../CSS/checkboxes.css" />
+    </head>
+    <body>
+        <form>
+            <div>
+                <input type="checkbox" id="front-end" checked />
+                <label class="label-inline" for="front-end">Front-end</label>
+            </div>
+            <div>
+                <input type="checkbox" id="back-end" disabled />
+                <label class="label-inline" for="back-end">Back-end</label>
+            </div>
+            <!--
+            - label element: To provide label to checkbox.
+            - By-default, milligram sets the display property to block for label element.
+            - To make it inline, we use utility class 'label-inline' for the label element.
+            - When we associate the label with the checkbox using id attribute, then we can click on the label to select the checkbox.
+
+            - To stack these 2 checkboxes vertically, we wrap these two elements inside the div.
+            - 'checked' attribute: To select a checkbox by default.
+            - 'disabled' attribute
+            -->
+        </form>
+    </body>
+    <!--
+    • Shortcuts:
+    1. input:checkbox - Creates an input element of type checkbox. 
+    -->
+</html>

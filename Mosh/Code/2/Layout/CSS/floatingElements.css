@@ -1,0 +1,42 @@
+body {
+    margin: 10px;
+}
+
+.tweet {
+    border: 2px solid lightgrey;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Adds a block-level element after the contents of any element having a class of 'clearfix' to prevent parent collapse */
+
+.avatar {
+    width: 5rem;
+    float: left;
+    /*
+    - float property places an element on the left or right side of its container and remaining elements gets wrapped around it.
+
+    Problem with floated elements:
+    - All the HTML elements grow in size in order to fit in their child elements but this is not the case if their child is a floated element.
+    - Floated elements are not visible to parent elements so they sometimes collapse. 
+    - This is called parent collapsing.
+
+    Its solution:
+    1. We can add a div at the end of the container.
+        - But that div is not meaningful to search engines and screen readers. 
+        - We have added it just to solve a layout issue.
+        - This makes our HTML non-semantic.
+    2. Use pseudo-element '::after'
+    */
+    margin: 10px;
+}
+
+/* To prevent second paragraph to float around the avatar we can use clear property */
+.clear {
+    clear: both;
+    padding-left: 10px;
+}
+

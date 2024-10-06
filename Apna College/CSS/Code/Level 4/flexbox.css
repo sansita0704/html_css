@@ -1,0 +1,117 @@
+body {
+    text-align: center;
+}
+
+div {
+    font-size: larger;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#container {
+    height: 200px;
+    width: 700px;
+    display: flex;
+    /* 
+    - By setting display: flex, we can use all flexbox properties.
+    - All flex items always try to remain in flex container till its content's font size allows it. 
+    - So, they can sometime resize themselves in order to fit into the flex container (This happens when the container is given a fixed height and width or there is no space left on screen).
+    */
+
+    flex-direction: row;
+    /*
+    - This property defines the axis and order in which flex items should be placed in a flex container.
+
+    row (default value) - main axis: left to right and cross axis: top to bottom (placement of items will start from left to right)
+    row-reverse - main axis: right to left and cross axis: bottom to top 
+    column - main axis: top to bottom and cross axis: left to right
+    column-reverse - main axis: bottom to top and cross axis: right to left
+    */
+
+    justify-content: center;
+    /*
+    aligns flex items along main axis.
+
+    Flex-start - aligns items at the start of main axis (does not change order of their placement)
+    Flex-end - aligns all items at the end of main axis 
+    Space-around - distance between 2 boxes is double the distance between box and boundary of flex container
+    Space-between - distance between box and boundary of flex container is zero
+    Space-evenly - all the space is divided evenly between the boxes and the boundary of flex container
+
+    Note: All these distances will be along main axis.
+    */
+
+    align-items: center;
+    /* 
+    aligns flex items along cross axis 
+    
+    stretch - only auto-sized items will be stretched to fill the extra space in flex container
+    */
+
+    /* flex-wrap: wrap; */
+    /*
+    nowrap (default value) - items are placed in straight line so they may resize themselves to fit inside flex container
+    wrap - items gets arranged in multiple lines i.e. they gets wrap if necessary but their order or direction of arrangement remains 'row' only
+    wrap-reverse - similar to wrap but cross-start and cross-end are reversed.
+    */
+
+    /* align-content: center; */
+    /*  
+    sets the distribution of space around flex items
+    it has no effect on flex items arranged in single line (i.e. ones with flex-wrap: nowrap;)
+
+    center - items gets stick to each-other leaving no space in-between and aligns at the center along the cross axis
+    flex-start - items gets stick to each-other leaving no space in-between and aligns at the top of the cross axis 
+
+    If this alignment is done using align-items property then some space will be present in between the lines along which items are wrapped due to flex-wrap property.
+    But when align-content property is used then there is no space between the elements. All the content gets aligned at the top of cross axis and all the space comes at the bottom of cross axis
+    */
+}
+
+#box1 {
+    background-color: antiquewhite;
+}
+
+#box2 {
+    background-color: aquamarine;
+    align-self: flex-start;
+    /* 
+    - To align individual item along cross axis 
+    - It has higher priority than align-items property so even if it is written before align-items, then also it will get priority)
+    */
+
+    flex-shrink: 0;
+    /*
+    When the size of flex container is too small then flex items resizes and tries to fit in the container. We can control this shrinking of items using flex-shrink property
+
+    0 - no shrink i.e. that item will not shrink at all no matter how small the container is (it may overflow)
+    1 (default value)- all items will shrink equally
+    2 - that item will shrink 2 times more than others like if the width of others gets decreased by 20px then the width of the item with  flex-shrink: 2; will be decreased by 40px
+    */
+}
+
+#box3 {
+    background-color: chocolate;
+    flex-grow: 1;
+    /*
+    When the size of flex container is more than the size of all the items then we can make some times grow to fill up the space using this property
+
+    0 (default value) - item will not grow
+    1 - it will grow so as to fill the space
+    if more than one item has flex-grow: 1; then all of them grow equally to fill the extra space
+    2 - grow twice than other items  
+    */
+}
+
+#box4 {
+    background-color: cornflowerblue;
+    /* flex-shrink: 0.5; */
+    flex-grow: 2;
+}
+
+#box5 {
+    background-color: rgb(252, 118, 144);
+    /* align-self: flex-end; */
+}

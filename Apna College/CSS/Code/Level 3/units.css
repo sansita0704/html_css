@@ -1,0 +1,31 @@
+#div1 {
+    background-color: blueviolet;
+    height: 500px;
+    width: 200px;
+    font-size: 20px;
+}
+
+#div2 {
+    background-color: pink;
+    height: 50px;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 10%;
+    /* above all 3 properties are relative to the width of div1 */
+}
+
+#div3 {
+    background-color: aquamarine;
+    font-size: 0.5em;
+    /* 0.5 times of font-size of parent element  */
+    width: 2em;
+    /* 2 times of font-size of the element itself */
+}
+
+#div4 {
+    background-color: bisque;
+    font-size: 5rem;
+    /* By default, a text written inside html tag gets a font-size of 16px. So font-size of div4 becomes 5 times of it i.e. 80 px */
+    width: 8rem;
+    height: 50vh;
+}

@@ -1,0 +1,40 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    /*
+    - This means 1 * font size of the parent element (html element).
+    - The best practice for setting the font size is to use rem unit.
+    - Using rem unit we can easily make our website responsive.
+    - We just defined font-size of html element in media query and the font size of all the elements will be changed accordingly because we have used rem unit everywhere. 
+    */
+
+    /* Use typescale.com to see various font-sizes in action. */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+/* We separated the rule for font-family and font-size because we want same font-family for all headings but different font-size. */
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 130%;
+    }
+}

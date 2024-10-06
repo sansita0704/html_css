@@ -1,0 +1,40 @@
+.bg-dishes {
+    width: 100px;
+    height: 100px;
+    background: url("../Images/css_sprites.png") -0 -0;
+    display: inline-block;
+}
+/*
+- Firstly, the image is cropped to 100px * 100px dimension.
+- Then, using background-position property we are selecting the image that we want to display.
+- "0 0": Top-left corner of 100 * 100px
+- "-100px 0": - Image gets shifted to 100px left so now 2nd image appears on the website.
+*/
+
+.bg-landing {
+    width: 100px;
+    height: 100px;
+    background: url("../Images/css_sprites.png") -100px -0;
+    display: inline-block;
+}
+
+.bg-rocketship {
+    width: 100px;
+    height: 100px;
+    background: url("../Images/css_sprites.png") 0 -100px;
+    display: inline-block;
+}
+
+.bg-saturn {
+    width: 100px;
+    height: 100px;
+    background: url("../Images/css_sprites.png") -100px 100px;
+    display: inline-block;
+}
+
+.bg-ufo {
+    width: 100px;
+    height: 100px;
+    background: url("../Images/css_sprites.png") -200px -0;
+    display: inline-block;
+}

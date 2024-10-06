@@ -1,0 +1,73 @@
+body {
+    margin: 10px;
+}
+
+/*
+Colors in css can be represented by:
+
+1. RGB value: 
+- Every color can be made by a combination of red, green and blue color.
+- So, each color can be represented by a set of three numbers where each number corresponds to the intensity of red, green, blue, respectively.
+- Range of a number is from 0 to 255
+- There is a rgba value where a stands for alpha.
+- Alpha represents the opacity of the color and can have decimel values from 0 to 1.
+
+2. Hexadecimel value:
+- Contains the digit 0-9 and letters a-f.
+- It has six characters where every two characters represents one of the number of rgb value.
+- We can't set the opacity of the color using this system.
+
+3. HSL value: 
+- Short for Hue, Saturation and Lightness.
+- Hue is the degree of the color and determines the tone of the color like red, green or yellow.
+- Saturation can be between 0% to 100%.
+- Lightness determines how much bright or dark a color is. As its value increases color becomes more and more bright.
+*/
+
+.first {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(244, 113, 174, 0.5);
+    color: hsla(135, 74%, 25%, 1);
+    /* color: hsl(135deg 74% 25%) */;
+    font-size: 50px;
+}
+
+
+/*
+Gradients:
+- Gradient is technically an image so we can't use background-color property to set it.
+- We can use background-image property or background shorthand property (in which we can input either background color or image).
+- To add a gradient, we call gradient function.
+- There are two types of gradient: linear and radial gradiant.
+
+Linear gradient: 
+- It tansitions the colors along a straight line.
+- To set the direction of this line, we can either use keywords (e.g. - to right) or use degree.
+- 0deg: top to bottom
+- 90deg: left to right
+- 45deg: bottom-left to top-right
+*/
+
+.second {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom right, deeppink,  plum 30%, dodgerblue 90%);
+}
+/* 
+- plum 30%: means the gradient transitions to plum by 30% of available space.
+- dodgerblue 70%: means dodgerblue starts from 90% of available space.
+*/
+
+/*
+Radial Gradients: 
+- If the shape of div is square then the gradient is in circles and if it is rectangle then the gradient is in ovals.
+*/
+
+.third {
+    width: 600px;
+    height: 200px;
+    background: radial-gradient(circle at top left, white, yellow);
+}
+
+/* We can use a website called CSS Gradient.io to create gradients easily */

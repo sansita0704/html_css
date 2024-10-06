@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SVG</title>
+        <link rel="stylesheet" href="../CSS/svg.css" />
+        <script
+            src="https://kit.fontawesome.com/8cd8a03ea0.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <img class="ufo" src="../Images/ufo.svg" alt="" />
+
+        <!--
+        - We can display icons either by using svg images or using icon fonts.
+        - These icon fonts are special fonts.
+        - Most popular icon fonts are:
+        1. Font Awesome (https://fontawesome.com/)
+        2. lonicons
+        3. Material Design Icons
+        -->
+
+        <i class="fa-solid fa-user-friends fa-2x"></i>
+        <!--
+        - It has 2 classes:
+        1. fa-solid: font awesome-solid
+        2. fa-user-friends: fa<- icon name ->
+
+        - Font Awesome provides a no. of utility classes.
+        e.g. - fa-2x: makes that icon twice relative to the fontsize of its parent.
+
+        - To have more control on the size and color of the icon, we can wrap it in a span.
+        - i element is depricated in HTML.
+        - It was earlier used to make text italic but now we use separate css file to do all the styling.
+        - But using i element for icons is an accepted practice.
+        - We can also use span element instead of i element for icon.
+        -->
+        <span class="icon">
+            <i class="fa-solid fa-search"></i>
+        </span>
+    </body>
+
+    <!-- Go to https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/ to get free vector background images -->
+</html>

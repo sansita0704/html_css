@@ -1,0 +1,43 @@
+body {
+    background: url(../Images/bg-paper@2x.jpg);
+    background-repeat: no-repeat;
+    /*
+    - repeat-x: Repeats in horizontal direction
+    - repeat-y: Repeats in vertical direction    
+    */
+
+    background-position: 100% 0;
+    /*
+    - By default, our background image is placed on top-left corner of our container.
+    - This property takes two values:
+        1. Horizontal adjustment 
+        2. Vertical adjustment 
+    - 100px 100px: 100px right and 100px down.
+    - We can supply negative values also.
+    - If we set first value to 100% then image gets pushed to right side of the container.
+    */
+
+    background-size: cover;
+    /* Takes two values: one for the width and the other for the height or we can also supply keyword like cover */
+
+    height: 300vh;
+
+    background: url(../Images/bg-sanfrancisco.jpg);
+    background-size: cover;
+    /*
+    - cover: Baxkground image covers the entire container maintaining its aspect ratio i.e. it covers 100% of the viewport area.
+    - But if we set the height of body element to 300vh then our background also resizes it.
+    */
+
+    background-attachment: fixed;
+    /*
+    - Now, the background remains fixed relative to the viewport.
+    - So, when we scroll our content moves but the background remains fixed.
+    - Now, our background image only covers 100% of vh and not 300%.
+    */
+}
+
+.meal {
+    /* width: 100vh; */
+    /* Takes up the entire viewport height. */
+}

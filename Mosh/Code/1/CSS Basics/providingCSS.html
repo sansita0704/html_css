@@ -1,0 +1,76 @@
+<!--
+We can provide CSS using:
+- Embedded stylesheet
+- Externel stylesheet
+- Inline styles
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS</title>
+        <link rel="stylesheet" href="CSS/normalize.css">
+        <!--
+        - Different browsers render some of the HTML elements differently because they also apply some default stylesheets to the HTML file so properties of some elements may change in different browsers.
+        - To solve this issue we use a stylesheet called normalize.css 
+        - It sets some HTML elements to some particular styles so that they look same on all browsers.
+        - For example: normalize.css sets line-height property of HTML element to 1.15 because different browsers have different value of it.
+        -->
+        <link rel="stylesheet" href="CSS/styles.css" />
+        <!--
+        'link' element has two attributes:
+
+        1. rel (relationship) : determines the type of document that we want to link with
+        2. href
+
+        Note: 'link' element is a self-closing element i.e. it does not have opening and closing tag. It has only one tag which is self closed.
+        -->
+        <style>
+            /*
+            p {
+                color: crimson;
+            }
+            */
+            /*
+            This is an embedded stylesheet.
+            
+            Problems: 
+
+            1. This is not scalable:
+            - If we have more than one pages that wants font color as crimson then we have to copy this and paste it in the HTML file of those pages also.
+            - And if we want to change the color some day we have to change it in all the pages.
+
+            2. It violates the principle of computer science called 'separation of concerns'.
+            - HTML is used to stucture our webpage and CSS is used to style them i.e. HTML and CSS are made for two different concerns.
+            - So, they should be separated and organised in different files similar to the products organised in different categories in a supermarket.
+            - To separate them, we can use externel stylesheets.
+
+            Use:
+
+            - It can be useful when we need to overwrite some of the styles in our externel stylesheet.
+            - In this case, we can add style element after the link element.
+            */
+            /*
+            - In CSS, the rule written below has higher priority than the rule written above it.
+            - So, if we write style element after link element then style element will overwrite link element and vice-versa
+            */
+            #first {
+                color: blue; 
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+        - Inline style is used to apply style to a particular element.
+        - Every HTML element has style attribute in which we can write one or more style elements separated by semi-colon.
+        - Inline styles also violate the principle of separation of concerns because we are adding CSS in middle of HTML 
+        - So, we should avoid it as much as possible.
+        - If we want to color 1st paragraph blue and make it bold then we can give it a unique identifier.
+        -->
+        <p id="first">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </body>
+</html>

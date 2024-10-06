@@ -1,0 +1,23 @@
+body {
+    margin: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 3px solid gold;
+    overflow: scroll;
+    /* Shorthand for overflow-x and overflow-y */
+}
+/*
+- When we add too much content which can't be added to a fixed sized element then there is an overflow.
+- We can use the overflow property to control the behaviour of overflow.
+- By default, its value is set to visible.
+- It can take values like:
+    1. hidden: Extra contents gets hidden.
+    2. scroll: Extra content can be scrolled. 
+        - But the scroll bars are visible even when there is no overflow.
+    3. auto: Same as scroll but the scroll bars are shown only when there is some overflow.
+- overflow-x: sets overflow property for the content which overflows left and right edges.
+- overflow-y: sets overflow property for the content which overflows top and bottom edges.
+*/

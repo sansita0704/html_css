@@ -1,0 +1,68 @@
+body {
+    margin: 10px;
+}
+
+/*
+Selector Specificity or Weight:
+- Whenever more than one style target the same element, then the browser applies that style which is more specific.
+- The specificity of different elements is decided by specificity triangle.
+- On top of specificity triangle, we have ID selector because we can't have more than one elements with same ID so an ID selector can target only 1 element. That's why it is the most specific selector.
+- Next, we have class and attribute selector because more than one elements can have same name or attribute so they can target more than one element. Hence, they are less specific.
+- At last, we have element selector which is the least specific because it targets all the elements of a particular type.
+- Specificity is represented by three numbers separated by comma and enclosed in paranthesis.
+- First number represents the number of ID selector present in the rule.
+- Second number represents the number of class/attribute selector present in the rule.
+- Third number represents the number of element selector present in the rule.
+*/
+
+h1 {
+    color: dodgerblue;
+}
+/* Its total specificity is 1 */
+
+.highlight {
+    color: deeppink;
+}
+/* Its total specificity is 10 */
+
+#products {
+    color: green;
+}
+/* Its total specificity is 100 */
+
+#products {
+    color: brown;
+}
+/* When two or more styles of equal specificity target the same element, then the style which is written last is applied to that element. */
+
+/* 
+- If we do not want most specific style to overwrite the less specific style we can use keywords like important.
+- When we apply this keyword, then other rules gets discarded.
+- But using this keyword in our code is considered a bad practice because it makes our code hard to maintain and we end up wasting time in fixing styling issues.
+- Better way to solve this problem is by using a selector which is more specific than ID selector.
+*/
+/*
+h1 {
+    color: deeppink !important;
+}
+*/
+
+h1#products {
+    color: dodgerblue;
+}
+/* Its total specificity is 101 so it is more specific than ID selector */
+
+.highlight#products {
+    color: dodgerblue;
+}
+/* Its total specificity is 110 so it is also more specific than ID selector */
+
+.featured #products {
+    color: brown;
+}
+/* Its total specificity is 110 so it is also more specific than ID selector */
+
+/* We should not write too specific selectors as they can be difficult to read and maintain */
+html body #featured h1#products.highlight {
+    color: aliceblue;
+}

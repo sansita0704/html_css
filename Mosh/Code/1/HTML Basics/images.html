@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image</title>
+        <style>
+            img {
+                height: 200px;
+                width: 200px;
+                object-fit: cover;
+                /*
+                - In html, there is a box around all the elements using which browsers figure out how to place items 
+                - So here, there is a box of 200px*200px in which we are putting an image
+                - Using, 'object-fit: cover;' the image crops itself to get inside the box
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../images/coffee.jpg" alt="A coffee mug on a table">
+        <!--
+        alt attribute is used to provide some textual desciption about the image 
+
+        - useful for screen readers as they can read the desciption so that visually imapaired people can understand better
+        - search engines can understand our webpage better
+        - if there is a connectivity issue or for some reason the image is not displayed then the text will help user to understand what the image is about
+        -->
+    </body>
+</html>

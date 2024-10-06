@@ -1,0 +1,105 @@
+body {
+    margin: 10px;
+}
+
+/*
+Flexible Box Layout (FlexBox):
+- A layout method used to layout elements in one dimension (horizontal or vertical).
+- To enable this, first we have to set display property of container element to flex.
+
+Types of axes:
+1. Main axis (primary)
+2. Cross axis (secondary)
+
+1. Direction: row
+    main axis - left to right
+    cross axis - top to bottom 
+2. Direction: column
+    main axis - top to bottom
+    cross axis - left to right
+
+Properties to align items:
+
+1. justify-content - used to align elements along main axis.
+2. align-items - used to align elements along cross axis.
+*/
+
+.container {
+    border: 3px solid lightgrey;
+    display: flex;
+    /*
+    - Although we have set its display property to flex, then also it is a block-level element.
+    - On the outside, it is block-level element.
+    - On the inside, we can apply all flex properties on it.
+    - So, it can resize itself in order to fit its child elements inside it.
+    */
+
+    flex-direction: row;
+    /* sets the direction of main and cross axis */
+
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+    /* flex-wrap: wrap; */
+    /* 
+    - Flex items always try to remain inside the flex container. 
+    - In order to do that they can sometimes resize themselves.
+    - We can prevent this resizing using flex-wrap property.
+    - Default value is nowrap.
+    */
+
+    /* align-content: center; */
+    /* 
+    - This property only works when we have more than one line of elements inside the flex container.
+    - Used to align mutiple lines of elements as content as a whole.
+    */
+}
+
+.box {
+    flex-basis: auto;
+    /* 
+    - Sizes the items along main axis.
+    - Overwrites height or width property.
+    */
+
+    flex-grow: 0;
+    /* 
+    - Determines the growth factor for items
+    - This property allows flex items to grow and take up empty space available.
+    - By default, it is set to 0.
+    - When it is set to 1 for all items, then all of them will grow equally.
+    - But if only one item has flex-grow set to 1 then, only that item will grow to fill the entire space.
+
+    How it works?
+    - It adds the value of flex-grow property for each of the boxes. (Here, it is 1 + 1 + 2 = 4)
+    - Now, it takes up the entire empty space and divides it in 4 parts.
+    - Then, gives 2 parts to A, 1 part to B and 1 part and C.
+    - That's why, the size of A is not twice as the size of B and C.
+    */
+
+    flex-shrink: 1;
+    /* 
+    - Determines the shrink factor for elements if there is no space to fit in the container.
+    - By default, it is set to 1. So, all the items shrink equally.
+    */
+
+    flex: 1 1 200px;
+    /*
+    - Shorthand for flex-grow, flex-shrink, flex-basis properties.
+    - If we supply only one value it determines growth factor.
+    - If we supply two values then first one determines growth factor and second can be either shrink factor or flex-basis.
+    */
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+    margin: 20px;
+}
+
+#box-one {
+    align-self: flex-start;
+    /* flex-grow: 2; */
+
+    flex-shrink: 0;
+    /* Now, this item will not shrink */
+}

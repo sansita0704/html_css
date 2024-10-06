@@ -1,0 +1,107 @@
+body {
+    margin: 10px;
+}
+
+/*
+- Grids are used to layout elements in both rows as well as columns.
+
+• Creating Grids:
+- Firstly, we set display property of the container element to grid.
+- Then we can use grid-template-columns and grid-template-rows to specify the number and dimensions of columns and rows respectively.
+
+• Align grid items:
+1. justify-items - aligns items along horizontal axis.
+2. align-items - aligns items along vertical axis.
+
+Note: Default value of both of these properties is stretch. So, if height and width of items are not specified they will stretch to fill in the grid.
+
+• Align grid inside its container:
+1. justify-content - horizontal alignment
+2. align-content - vertical alignment
+
+('content' represents entire grid while 'items' represent individual grid items in alignment properties)
+
+• Add gap between grids:
+1. row-gap
+2. column-gap
+3. gap - shorthand property
+
+• Placing items in a grid:
+1. grid-row
+2. grid-column
+3. grid area - shorthand property
+
+• Placing items in named area:
+1. grid-template-area - to assign name to different grids.
+2. grid-area - 
+*/
+
+.container {
+    display: grid;
+    /*
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px);
+    */
+    /* grid-template: repeat(3, 100px) / repeat(2, 100px); */
+
+    grid-template: 100px auto 100px / 30fr 70fr;
+    /* Creates a grid of 3 * 2 */
+    /*
+    - We should not use percentages in case of grid because if we write '100px 30% 70%' to provide the size of columns then the grid will overflow from its container.
+    - Because percentages are based on the size of the container but here we want the 30% and 70% of the free space left after giving 100px to the 1st column.
+    - We do not want the 30% or 70% of the container's width.
+    - To do that, we can use fraction(fr) unit that means fraction of the available free space.
+    - So, here 2nd and 3rd column takes up 30 parts and 70 parts of the available free space respectively.
+
+    - We want the third row to fill the space which is left after giving 100px to 1st and 3rd row each so, we use 'auto' keyword.
+    */
+
+    gap: 10px;
+    /*
+    same as 
+    row-gap: 10px;
+    column-gap: 10px;
+    */
+
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        ".       footer";
+    /* "first row" "second row" "third row" */
+    /* To assign an empty cell, we use '.' */
+
+    border: 2px solid lightgrey;
+    height: 100vh;
+}
+
+.box {
+    background: gold;
+}
+
+.box-one {
+    grid-column: 2;
+    /* A moved to 2nd column and remaining items are aligned from top-left to bottom-right */
+
+    grid-column: 1 / 3;
+    /*
+    grid-column: 1 / -1;
+    grid-column: 1 / span 2;
+    */
+    /* A starts from line 1 and ends at line 3 */
+
+    grid-row: 2;
+    /* A moved to 2nd row and remaining items are aligned from top-left to bottom-right */
+
+    grid-area: 1 / 1 / 1 / 3;
+    /* 
+    - Takes four numbers.
+    - First two represent starting row and columm.
+    - Last two represent ending row and columm.
+    */
+}
+
+
+.box-four {  
+    grid-area: footer;
+    /* Instead of using line numbers, we are using names to identify different areas */
+}

@@ -1,0 +1,15 @@
+div {
+    height: 300px;
+    width: 500px;
+    background-image: url(/CSS/Nature.jpg);
+    background-size: cover;
+    color: rgb(33, 6, 88);
+    font-size: 50px;
+    font-family: cursive;
+    text-align: center;
+    border: 2px solid rgb(33, 6, 88);
+    border-radius: 30px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}

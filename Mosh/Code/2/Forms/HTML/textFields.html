@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Fields</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+        <link rel="stylesheet" href="../CSS/textFields.css" />
+    </head>
+    <body>
+        <form>
+            <input type="text" autofocus readonly value="..." />
+            <input type="number" disabled value="..." />
+            <!--
+            type: 'number' has 2 benefits:
+            1. On mobile phones, the keyboard that appears, it automatically changes to number keyboard.
+            - So, it makes easier to use this form.
+            2. Now, we can only set numbers to it.
+            -->
+
+            <input type="password" />
+            <input type="date" />
+            <input
+                type="email"
+                value="sansita7406@gmail.com"
+                placeholder="Email"
+            />
+            <!--
+            Attributes of input elements:
+
+            • 'value': To pre-populate (pre-fill) the field.
+                - Fill the field with some text before user enters some data.
+            • 'placeholder': A label is visible in input field but as soon as we start writing, it disappears. 
+            • readonly: User cannot write something.
+                - So, we add value attribute with this attribute.
+                - User is able to select the input field.
+            • disabled: Just like readonly but the user can't select the field.
+                - Also, the data written to value attribute is not sent to the server.
+            • maxlength: Used for validation.
+                - If it is set to 5, then the user can only write 5 characters not more than that.
+            • autofocus: Boolean attribute i.e. we do not have to supply any value to it.
+                - As soon as the page loads, that field gets automatically focused.
+
+            - textarea also has same attributes as input element except value attribute.
+            - To pre-populate them, we write the text in between its opening and closing tag.
+            -->
+
+            <textarea cols="60" rows="10"></textarea>
+            <!--
+            - To add more than 1 line input field, we use textarea.
+            - cols: no. of characters in a line.
+            - rows: no. of lines.
+            - It is resizable in browser but if we want to stop it we can resize property.
+            - While using milligram, if we change the rows and cols we don't see any change due to the height provided by the milligram.
+            - But we can change its height.
+            -->
+
+            <input type="text" list="countries" autocomplete="off" />
+            <datalist id="countries">
+                <option value="1">Australia</option>
+                <option data-value="2">Canada</option>
+                <option>India</option>
+                <option>United States</option>
+            </datalist>
+            <!--
+            - To give a suggestion list to the user, we use datalist element and then use option element to give options to the user.
+            - To associate the datalist with our input element, we give an id to datalist element and then use list attribute.
+            - So, now the user can select something from the given options or he/she can even write something else i.e. not there is the list.
+            - To force the user to enter the values from the given list only, we have to use dropdown.
+
+            - Generally, the server has a huge database containing a list of countries where each country has a unique identifier associated with it.
+            - So, while submitting the form, we want to send that unique identifier to the server.
+            - So that on the server, we know which country that user has selected.
+            - To do that, we use value attribute.
+            - So, we set the value attribute with the unique id of the country.
+            - But that id is visible to the user. We don't want that.
+
+            - To do this, we use data attribute.
+            - In HTML if we write 'data-' with an attribute, we can create a custom attribute.
+            - Then later, using JS we can read the value of this attribute and can submit it to the server.
+
+            - While using datalist, we want to turn off the autocomplete provided by the browser.
+            - So that, if the user has previously typed something in the field then it doesn't shows that as a suggestion.
+
+            - Every browser has a different look and feel of this suggestion list.
+            - If we want it to look consistent across all the browsers, we can style it.
+            - But if we write the styles in our style sheet then the browsers style will take over it.
+            - Hence, the changes will not be visible.
+            - We can use JS to solve this problem.
+            -->
+        </form>
+        <!-- Go to https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input to know more about input element types. -->
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video and Audio</title>
+    <style>
+      video {
+        height: 800px;
+      }
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <video controls autoplay muted loop src="/HTML/Mosh/Videos/ocean.mp4">
+      Your browser doesn't support videos
+    </video>
+    <!-- This is an absolute URL -->
+    <!--
+    - 'controls' - It is a boolean attribute i.e. it can take only two values true or false 
+    - In HTML, the absence of 'controls' attribute represents false and its presence represents true so there is no meaning of assigning some value to it 
+    - 'autoplay' - video gets automatically played when the page is refreshed 
+    -->
+
+    <audio controls autoplay muted loop src="audio.mp3"></audio>
+  </body>
+</html>

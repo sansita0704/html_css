@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- HTML boilerplate or basic HTML template -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!--
+        'charset' attribute is used to define what character set has been used in this html file
+
+        Computers can't understand the letters a,b,c or symbols so various character sets are used which assigns a unique code or numeric value to each character.
+
+        e.g - ASCII character set - can represent all the letters of english language
+        UTF-8 - can represent almost all the characters we use
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--
+        'viewport' - visible area of a webpage
+        - On mobile or tablet viewport is smaller wrt the laptop
+        - Using this line we are defining the initial width and zoom factor of the webpage so that our website looks good on all kind of devices
+        -->
+        <meta name="keywords" content="HTML, CSS" />
+        <!-- used to write keywords which represent our webpage -->
+        <meta name="description" content="..." />
+        <!-- used to provide description of the webpage which is visible on browser when we search about our webpage -->
+        <title>Text</title>
+        <style>
+            em {
+                color: blue;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Web Devolopment</h1>
+        <!--
+        - An HTML page should have only one h1 element otherwise multiple h1 elements would confuse the search engine. It would be difficult to understand what the page is all about 
+        - heading elements should be used to make a hierarchy and not according to their font size
+        -->
+
+        <h2>HTML</h2>
+        HTML tutorial
+        <h3>Code</h3>
+        <h3>Exercise</h3>
+        <h2>CSS</h2>
+        <br />
+        <p>I love to <em>paint</em>! 😊</p>
+        <p>I love to <strong>read books</strong>!</p>
+        <!--  
+        - 'em' tag is used when we have to emphasis some content 
+        - By default, it does the text to italic but we can change it in style tag
+        - It should not be used for styling because it is used to give emphasis content which helps search engines to extract important information about the webpage
+        - All the styling part should be done with css inside style tag, HTML is used only for structuring the webpage
+        -->
+
+        <!--
+        To display reserved characters or the symbols which cannot be typed using standard keyboard we use HTML entities.
+        -->
+        <br>
+        <p>&lt;Hello&gt; World!</p>
+        <p>Copyright &copy;</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis inventore ea error, dolor provident quas mollitia exercitationem. Hic dolorem corporis, nobis veniam possimus rerum nihil optio id saepe quod eos quaerat error ut&nbsp;eius exercitationem. Exercitationem sunt repellat error nobis fuga perferendis neque totam accusamus distinctio? Nulla iusto alias necessitatibus nisi facere consectetur neque illo hic dolor qui in quibusdam, reiciendis doloremque reprehenderit incidunt, assumenda quam saepe animi at quas. Dolores sapiente reprehenderit animi maiores, esse quam magnam at quaerat numquam, excepturi eos minima commodi libero velit laudantium quibusdam ipsam cum suscipit quod asperiores tempora. Ratione velit atque rem optio.</p>
+        <!--
+        &nbsp; - short for non-breaking space
+        used to prevent line breaks i.e both the words stays on the same line having a space between them
+        -->
+    </body>
+</html>

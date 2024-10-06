@@ -1,0 +1,23 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    font-size: larger;
+    text-align: center;
+    border: 2px solid black;
+    margin: 100px;
+    animation: discoLight 1s 1s 5 alternate;
+}
+
+@keyframes discoLight {
+    from {
+        background-color: blueviolet;
+        margin-left: 0px;
+        border-radius: 50%;
+    }
+    to {
+        background-color: pink;
+        margin-left: 200px;
+        border-radius: 0%;
+    }
+}

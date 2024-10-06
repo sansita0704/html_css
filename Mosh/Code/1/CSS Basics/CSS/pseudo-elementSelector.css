@@ -1,0 +1,45 @@
+/* To style a part of an element, we use pseudo-element selector */
+
+body {
+    margin: 10px;
+}
+
+.first-letter {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+/* We can do same styling using pseudo-element selectors */
+
+p::first-letter {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+::selection {
+    background-color: pink;
+}
+
+p::before {
+    content: "...";
+    display: block;
+}
+/* 
+- Adds "..." before every paragraph 
+- It is like a normal element only which gets inserted between the HTML code automatically but it is not a real element like span or div. It is a pseudo-element.
+*/
+
+p::after {
+    content: "...";
+    display: block;
+    font-weight: bold;
+}
+
+/*
+Difference between pseudo-element selector and pseudo-class selector:
+- We use pseudo-element selector to style a part of an element like the first letter of a paragraph whereas we use pseudo-class selector to style elements in a particular state like a hovered anchor.
+*/

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Image Types</title>
+        <link rel="stylesheet" href="../CSS/imageTypes.css" />
+    </head>
+    <body>
+        <!--
+        • Types of images:
+        1. Raster: 
+            - Made up of pixels.
+            - So, larger the image, the more pixels we need resulting in larger file size.
+            - Used for photos.
+            - Come from camera or scanner.
+            - Can be produced by software.
+            - Formats: JPG or JPEG, PNG, GIF,WebP etc.
+            - Look blurred if scaled up.
+        2. Vector: 
+            - Defined by a set of mathematical vectors like lines or curves.
+            - Used for basic graphics, icons and logos.
+            - Produced from the software (Illustrator).
+            - Formats: SVG (Scalable Vector Graphics)
+            - So, these graphics are scalable and they look sharp at any size.
+            
+        - On the web we don't want to add large-sized images because they take time to download.
+
+        • Formats:
+        - WebP images are generally smaller in size but the problem with them is that they are not supported by Internet Explorer.
+        - Transparency means the image having a transparent background so that it can be placed on any type of background.
+
+        - If we need transparency, we use GIF or PNG.
+        - If we want a lot of colors and details in our image we use PNG or WebP.
+        - Use GIF, PNG, WebP for animations of few seconds long.
+        - Most of the time, we use JPEG.
+
+        Check below images:
+        1. HTML/Mosh/Code/2/Images/Images/Raster Image Formats.png
+        2. HTML/Mosh/Code/2/Images/Images/Transparency.png
+        -->
+        
+        <img
+            class="meal"
+            src="../Images/meal.jpg"
+            alt="A bowl of salmon and curry"
+        />
+        <!--
+        • Two types of Images in HTML:
+        1. Content Image
+        2. Background Image
+
+        • Content Image
+        - Always provide description of image in alt attribute.
+        - If in case, the image does not contain any useful description or it is used for decoration purpose only then leave alt attribute with a pair of double quote only.
+        - If we do not add alt attribute then the screen reader will read the file name.
+        - Most of the time image name is not descriptive so, we do not want the screen reader to read the file name.
+        - That's why add alt attribute but do not provide any description.
+
+        - By default, the image is displayed in its original size.
+        - If we display a raster image in a size bigger than its original size then it becomes blurry.
+        - This is because there are not enough
+        pixels for the details.
+        - This is not the problem with SVG images but we cannot produce a real image using lines and curves.
+        - It will be too difficult.
+
+        • Background Image
+        - Used for decorative purposes.
+        - To set a background image we can either use background-image property or background property.
+        -->
+
+        <h1>Heading</h1>
+    </body>
+</html>

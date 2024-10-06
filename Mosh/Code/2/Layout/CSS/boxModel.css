@@ -1,0 +1,26 @@
+body {
+    margin: 10px;
+}
+
+p {
+    padding: 10px 20px;
+    /*
+    - Same as 10 20 10 20 
+    - First value: top and bottom padding or vertical padding
+    - Second value: left and right padding or horizontal padding
+    */
+    border: 5px solid gold;
+    /* The changes we do while inspecting ou webpage are inserted as inline styling */
+}
+
+
+p {
+    margin: 20px;
+    padding: 0;
+}
+/*
+- When we have two elements next to each-other, then we should always use margin property to make space between them.
+- This is because when we use margin property then the vertical margins of adjacent elements combine or collapse into a single margin.
+- This is called margin collapse.
+- Use padding property to make space between an element's content and border.
+*/

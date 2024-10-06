@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Table</title>
+        <style>
+            table,
+            td,
+            th {
+                border: 0.5px solid black;
+                border-collapse: collapse;
+                /* 
+                - Collapses the border between neighbouring cells into a single border.
+                - By default, the border of neighbouring cells are separated.
+                */
+                padding: 5px;
+                /* adds some space between data and the border */
+            }
+            /*
+            - When we apply styles on table and td element separately, then there is repetition. 
+            - Also, if we have to change them we have to modify two lines of code.
+            - To prevent this and follow DRY (Do not Repeat Yourself) principle, we can apply the styles to both of them by writing both of them separated by comma.
+            */
+
+            td {
+                text-align: center;
+            }
+
+            thead, tfoot {
+                background-color: rgb(215, 215, 215);
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Expenses</th>
+                    <!-- 
+                    - colspan (column span) - determines the number of columns a cell should expand.
+                    - Its default value = 1
+                    -->
+                </tr>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marketing</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Accounting</td>
+                    <td>$400</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <th>$500</th>
+                </tr>
+            </tfoot>
+            <!--  
+            - tr (table row) - used to define rows
+            - Rows contain two types of cells :  header cells and data cells
+            - Header cells are cells which contain the labels which define what the column consists of.
+            - Data cells contain the actual data of the table.
+            - th (table header cell)
+            - td (table data cell)
+            - 'thead' and 'tbody' elements make our code more meaningful to search engines and screen readers. This is called semantic (meaningful) HTML. 
+            -->
+        </table>
+        <!--
+        Shortcuts:
+        1. tr>td*3: creates 3 td elements inside 1 tr element
+        2. Moving a paragraph: 
+            - Select the paragraph
+            - Use option + up or down arrow key to move it up or down respectively.
+        -->
+    </body>
+</html>

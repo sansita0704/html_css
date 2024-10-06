@@ -1,0 +1,33 @@
+.contentArea {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+#navbar {
+    height: 60px;
+    background-color: black;
+}
+#logo {
+    font-size: 25px;
+    color: #f08804;
+}
+a {
+    margin-right: 200px;
+    text-decoration: none;
+    color: white;
+}
+button {
+    background-color: #f08804;
+}
+#red {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+#green {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+#blue {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+#content {
+    height: 600px;
+}

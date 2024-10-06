@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Custom Fonts</title>
+        <link rel="stylesheet" href="../CSS/customFonts.css" />
+    </head>
+    <body>
+        <!--
+        - Font files comes in different formats just like image and video files.
+        - Font formats:
+            • TTF
+            • OTF
+            • EOT
+            • WOFF
+            • WOFF 2.0
+        - For web, we use WOFF and WOFF 2.0 because they are compressed and more efficient for web.
+        - TTF files are very big so we convert them to WOFF to use it for web.
+
+        • Embedding custom fonts:
+        1. Download required font using fontsquirrel.com
+        2. By default they are downloaded in TTF format. So convert them to woff using Generator tab on fontsquirrel.com.
+        3. Upload the fonts on Generator tab and click on 'Download your kit'.
+        4. Move the downloaded files into VS Code and copy the code written in stylesheet present in downloaded folder.
+
+        • Problem with custom fonts: flash of unstyled text
+        - It means that when the browser will download our custom font, it will use a fallback font.
+        - Hence, our text may appear unstyled.
+
+        Cache: 
+        - It is a kind of temporary storage that browser use to store the assets used in a website.
+        - So that, whenever there is a need for that asset, the browser can quickly retrieve that from cache rather than fetching it from the original source(server).
+        - For example: As we visit some web pages, the browser may download some images or font files in its cache.
+
+        - Here, we disable cache so that the resources get downloaded everytime we refresh the page.
+        - Now, if we set the throttling tab to 3G and refresh the page, we see arial for short period of time and then we see opensans.
+        - This happens because due to slow network speed, download of font file takes a few seconds till that the browser shows arial or helvetica.
+        - Then as the font file gets downloaded it displays the text in opensans.
+        - This is called Flash of Unstyled Text (FOUT).
+        - Sometimes, due to fout we may experience some element shifting from there place due to different font. So, it provides a bad user experience.
+        - But we cannot avoid this completely as to use the custom font, the font file has to be downloaded to users computer.
+        - We can only minimize it.
+
+        • Two ways to minimize it:
+        1. font-display property
+        2. Go to fontsquirrel.com and enable Expert setting.
+            - Then select custom subsetting option and then select the characters which we want on our webpage.
+            - As a result, some of the characters are not included in font file.
+            - So, its size gets reduced.
+        -->
+        <h1>Heading</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non,
+            repellat fugiat. Repellat repellendus aut eum rerum adipisci
+            quisquam quae tempora accusamus quas voluptate dignissimos, ab unde
+            incidunt sed quibusdam veniam at nemo magni. Enim eum reiciendis
+            inventore laborum veniam expedita quae itaque sint error deserunt
+            molestias, quaerat beatae ipsum esse?
+        </p>
+    </body>
+    <!--
+    • Websites for fonts:
+    - fontsquirrel.com
+    - fonts.com
+    - myfonts.com
+
+    - caniuse.com: search for which browser support which font file type.
+    -->
+</html>

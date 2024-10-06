@@ -1,0 +1,37 @@
+/* This is an externel stylesheet */
+
+body {
+    margin: 10px;
+}
+
+p {
+    color: blueviolet;
+}
+
+/* Selecting HTML elements using attributes */
+
+a[target] {
+    color: orange;
+}
+/* Selects all those elements which have target attribute */
+
+a[target="_blank"] {
+    color: red;
+}
+/* Selects all those elements whose target attribute value is '_blank' */
+
+a[href="https://google.com"]
+{
+    color: turquoise;
+}
+/* This type of selector should not be used because if we do some small change in URL of HTML file then the style wouldn't be applied */
+
+a[href*="google"] {
+    color: brown;
+}
+/* Selects all those elements whose href attribute value contains the word 'google' in it */
+
+a[href^="https"][href$=".com"] {
+    color: blueviolet;
+}
+/* Selects all those elements whose href attriute value starts with 'https' and ends with '.com' */

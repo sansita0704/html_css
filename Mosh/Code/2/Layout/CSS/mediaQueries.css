@@ -1,0 +1,73 @@
+body {
+    margin: 10px;
+}
+
+/*
+• Media Queries:
+- These are used to provide different styles for different devices depending on their features (screen size, orientation, etc.).
+- Using these, we can build responsive websites i.e. the websites which respond to various devices.
+
+• To build responsive websites we can do:
+1. Desktop first and then adjust the elements according to mobiles or tablets.
+2. Mobiles first and then adjust the elements according to desktops.
+
+Generally, we prefer 2nd option.
+
+- Breakpoint: The point where our styles break.
+*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    background: gold;
+    padding: 10px;
+}
+
+.box:nth-of-type(2) {
+    background: dodgerblue;
+}
+/* Selects the 2nd occurence of the elements having class of 'box' */
+
+@media screen and (min-width: 600px) {
+    .container {
+        flex-direction: row;
+    }
+}
+/*
+- A media query can have different parts.
+- It consists of a media type(like print, screen, etc.) and one or more expression that check for conditions.
+- Media type and conditions are separated by 'and' operator.
+- Basic syntax:
+    @media media-type and (condition) {
+        CSS rules
+    }
+
+- Media type 'screen' is used for web browsers, mobiles, tablets, computers, etc.
+- Media type 'print' is used for printers.
+- Breakpoints which we apply here depends on our need and design.
+- We should not use the data for the width of different devices from the internet because they are based on the existing devices in the market.
+- But if tomorrow, there might be a new device which will have different dimensions so our styles would break.
+*/
+
+@media screen and (min-width: 900px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .box {
+        background: wheat;
+    }
+}
+
+@media print {
+    body {
+        font-size: 20pt;
+    }
+
+    .box {
+        padding: 1cm;
+    }
+}

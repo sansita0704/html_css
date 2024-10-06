@@ -1,0 +1,43 @@
+body {
+    margin: 10px;
+}
+
+.first {
+    width: 200px;
+    height: 200px;
+    background-color: dodgerblue;
+    border-style: solid;
+    border-color: royalblue;
+    border: 10px solid royalblue;
+    border-bottom: 80px solid royalblue;
+    border-width: 10px;
+    /* 
+    - border-width: top right bottom left (trbl) 
+    - 'border-width: 10px 20px' is same as 'border-width: 10px 20px 10px 20px'
+    - 'border-width: 10px' means 10px border on all sides
+    */
+
+    border-radius: 100%;
+    /* Makes the shape of the div circular */
+}
+
+/* Visit css-tricks.com/the-shapes-of-css to learn more about different types of shapes */
+
+.second {
+    width: 200px;
+    height: 200px;
+    background-color: dodgerblue;
+    box-shadow: 10px 10px 30px grey;
+    /* 
+    First value: left (positive) or right (negative)
+    Second value: top (positive) or bottom (negative)
+    Third value: softness of the shadow
+    */
+    box-shadow: 0 0 30px grey;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}

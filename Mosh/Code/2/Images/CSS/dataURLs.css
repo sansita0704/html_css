@@ -1,0 +1,38 @@
+.meal:hover {
+    clip-path: polygon(
+        0% 20%,
+        60% 20%,
+        60% 0%,
+        100% 50%,
+        60% 100%,
+        60% 80%,
+        0% 80%
+    );
+
+    filter: grayscale(70%) blur(3px);
+    /*
+    - Using filter property, we can set filters to the images.
+    - grayscale is a function, in which we can pass some value.
+
+    - To see complete list of filters search for "css filter functions".
+    */
+}
+
+/*
+- Convention for naming different resolution image:
+- Append @2x or @3x at the end of the file name.
+- Here, 2x and 3x are DPR of the screen.
+
+- If we want to display the image on 400px logical pixels then we will make it 1200 x 1200px for 3x.
+- So, here we are changing the physical resolution of the image i.e. size of the image.
+- Always create larger resolution image first then make smaller.
+- Otherwise, the software (photoshop) will enlarge the image so it will become blurred.
+
+- We should use this, only when we have so many images which we want to look very sharp on every screen.
+*/
+
+.meal1 {
+    width: 400px;
+    /* Here, 400px is a logical resolution. */
+}
+

@@ -1,0 +1,60 @@
+@font-face {
+    /* font-face rule is written to register the font style so that we can use it anywhere in our code */
+    font-family: "opensans";
+    /* We changed the name of font-family */
+    src: url("Fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+        url("Fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+    /*
+    If the browser supports WOFF2 type file, then it will download that file, otherwise it will download the WOFF file.
+    */
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+    /*
+    - It's initial value is auto i.e. browser decides by its own what to do.
+    - Some browsers first display the text with some other font and then once opensans gets downloaded they display the page with opensans.
+    - So, they uses some fallback font and then swap it with opensans. 
+    - Some other browsers, first hide the text when the font is being downloaded.
+    - Then, once the font gets downloaded it displays the text with opensans.
+    - This is called a Flash of Invisile Text.
+
+    Values of font-display property:
+    1. swap: 
+        - Browser uses a fallback font and then swaps it.
+        - Problem: if it takes 10 seconds to download the font, swapping will still happen after 10 sec. 
+        - So, if user started reading the text, then after 10 sec. the user may experience a layout shift.
+    2. fallback:
+        - It allows the browser to use a fallback font and we give it a short period of time.
+        - If in that short period, the font gets downloaded then the browser uses that font to display the text.
+        - But, if the font is not downloaded then the browser uses that fallback font only.
+    3. block (should never be used):
+        - First the browser hide the text then once the font gets downloaded it displays the text with opensans.
+        - Problem: if the font never gets downloaded due to network issue, then the text is never going to be displayed.
+    4. optional:
+        - We tell the browser that this font is optional it is not critical.
+        - So just like fallback we give it a short period of time.
+        - If the font is not downloaded it will not display it.
+        - But BTS it will try to download the font and store it in cache.
+        - Then if that page is reloaded then the text will be displayed with opensans.
+        - Problem: The text is not displayed with opensans on first load.
+    */
+}
+
+@font-face {
+    /*
+    - This rule is used to register open-sans bold file.
+    - So, both of these rules reference two different files.
+    */
+    font-family: "opensans";
+    src: url("Fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+        url("Fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+    font-weight: bold;
+    /* We changed the font-weight to bold because here we are referencing bold versions of opensans */
+
+    font-style: normal;
+}
+/* These two rules must be at the top of our stylesheet because we first need to register the font before we use it */
+
+p {
+    font-family: "opensans", Arial, Helvetica, sans-serif;
+}

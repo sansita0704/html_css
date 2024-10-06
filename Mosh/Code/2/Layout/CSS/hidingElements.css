@@ -1,0 +1,14 @@
+body {
+    margin: 10px;
+}
+
+.first {
+    visibility: hidden;
+}
+
+/*
+1. display: none;
+    - hides the element as if it is not there.
+2. visibility: hidden;
+    - hides the content but the space for the element remain as it is.
+*/

@@ -1,0 +1,15 @@
+* {
+    font-family:'Times New Roman' ;
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+#outer {
+    font-size: 25px;
+}
+#inner {
+    font-size: 10px;
+}
+/* Outer is a parent div and inner is a child div. So when we set font size for outer div only it automatically gets applied to inner div as well */

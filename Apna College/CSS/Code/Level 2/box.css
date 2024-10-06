@@ -1,0 +1,51 @@
+/*
+Box Model:
+It describes that every element in our webpage exists in the form of boxes or they can be visualised in the form of boxes
+
+Components:
+1. Content - The area where our content (like image or text) is displayed.
+2. Padding - Space between border and content. It is present inside the element but outside content area.
+3. Border - Boundary surrounding padding and content.
+4. Margin - Space between two elements which separates one element from other
+*/
+
+#div1{
+    height: 100px;
+    width: 100px;
+    /* Height and Width changes the dimensions of content */
+    background-color: pink; 
+    /* fills color inside the border so if padding or content area is increased then the color also spreads to larger area */
+    /* 3 basic border properties */
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+
+    padding-left: 25px;
+    padding: 1px 2px 3px 4px;  /* Clockwise sense */
+    margin: 1px 2px 3px 4px;
+    margin-top: 25px; /* Gets priority */
+}
+
+h1 {
+    width: 200px;
+    background-color: rgb(183, 122, 239);
+    border-style: dashed;
+    text-align: center;
+    /* Aligns the text with respect to its content area */
+}
+
+#para1 {
+    /* Border shorthand */
+    border: 1px dotted blue;
+}
+
+#div2 {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border-radius: 50%;  /* Creates circle */
+    text-align: center;
+    padding: 25px;  
+    /* From all four sides, padding = 25px */
+    margin: 25px;
+}

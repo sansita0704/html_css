@@ -1,0 +1,113 @@
+<!--
+Website has 2 parts:
+
+1. Front-end -> part of website which a user interacts with.
+It contains all the visual parts of website like buttons, text, images, etc. 
+
+2. Back-end -> behind the scenes
+part of website which deals with storing data in databases and providing it to the browser.
+-->
+
+<!--
+How the web works?
+
+'URL' - Uniform Resource Locator
+- The address which we type in the address bar of a browser is called a URL.
+- It is used to locate a particular resource (e.g. - Web pages, images, video files, etc.) on the internet 
+
+Whenever we provide a URL to the browser:
+        
+1. 'Browser/Client' asks for the homepage of that website to the server by sending a message which is formatted by using a protocol called 'HTTP' (Hyper Text Transfer Protocol).
+- HTTP is basically like a language through which client and server communicates with each-other.
+- HTTPS (Hyper Text Transfer Protocol Secure) - HTTP + encryption so that all the messages between client and server are encrypted.
+- The message sent by the client to the server is called a HTTP request.
+
+2. 'Server' hosts our website
+- Once it recieves client's message, it understands it and then provides client with the html code of that page.
+- The message sent by the server to the client is called a HTTP response.
+
+3. As the browser reads the server's message it constructs a DOM i.e. Document Object Model
+- DOM represents all the elements of a webpage 
+- There are addresses to different resources like images in the html document. To fetch them, browser sends separate requests to the server.
+- Once it has all the resources it renders(displays) the webpage     
+-->
+
+<!-- index.html represents the homepage of the website -->
+<!DOCTYPE html>
+<!--  
+Doctype Declaration:
+Using this line, we can tell the browser that this is a html5 document 
+
+- URL of this webpage = 127.0.0.1:5500/HTML/Mosh/Code/index.html
+- Here, 127.0.0.1 is an ip address which represents a local computer i.e. the computer which we are currently using
+- 5500 represents the port number on which the web server is waiting for http requests
+- Then we have our file address
+-->
+<html lang="en">
+    <!-- using lang attribute we can tell search engines the language of our html document so that they can display the results correctly -->
+    <head>
+        <!-- used to give info about the webpage -->
+        <title>Web Devolopment</title>
+        <style>
+            img {
+                height: 100px;
+                border-radius: 50px;
+                float: left;
+                margin-right: 10px;
+            }
+            /* 
+            - We write img to reference our image element.
+            - Inside curly braces we write css declarations.
+            - Each declaration contains a property and a value.
+            */
+            p.username {
+                font-weight: bold;
+            }
+            /* 
+            - Now this will apply only to those paragraph elements with the class 'username'.
+            - And if we write only '.username' then it applies to all the elements with the class 'username'
+            */
+        </style>
+        <script
+            src="https://platform.linkedin.com/badges/js/profile.js"
+            async
+            defer
+            type="text/javascript"
+        ></script>
+    </head>
+    <body>
+        <!-- Used to add elements which will appear on the webpage -->
+        <img src="/HTML/Mosh/Images/image.jpg" alt="An image of a girl" />
+        <!-- 
+        - Since, an image element cannot have any child element so it does not have a closing tag 
+        - Using attributes, we can supply extra info about the element
+
+        - src(source) attribute - used to specify the path of our image
+        - alt(alternative text) attribute - used to give browser some text to display in case the image can't display
+        -->
+
+        <p class="username">@sansitajain</p>
+        <!-- 
+        - 'class' is short for classification 
+        - It is used to separate different elements into different categories
+         -->
+
+        <p>I love to paint :)</p>
+        <br /><br /><br />
+        <div
+            class="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="dark"
+            data-type="VERTICAL"
+            data-vanity="sansita0704"
+            data-version="v1"
+        >
+            <a
+                class="badge-base__link LI-simple-link"
+                href="https://in.linkedin.com/in/sansita0704?trk=profile-badge"
+                >Sansita Jain
+            </a>
+        </div>
+    </body>
+</html>

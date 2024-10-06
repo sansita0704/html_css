@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 30px;
+}
+
+#navbar {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: circle;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#outer {
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner {
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resolution Switching</title>
+    </head>
+    <body>
+        <!--
+        • Resolution Switching
+        - When we want to provide different images for different devices like mobile phones, tablets, laptops.
+        - Different images have different resolutions even if they have same DPR.
+
+        - Now, if an image has to be displayed of a fixed size on all the devices then there is no problem.
+        - But, if we use a relative unit like vw to set its width then it will have different size on different screens.
+        - So, the browser has to resize the image for different screen size
+        - Hence, it has to store the entire image in its memory which will be very costly for the browser.
+
+        - So, we have to provide different versions of the image for different resolutions.
+        - But its is not possible to provide image for all different resolutions.
+        - So, what we do is, we provide a small, medium and large image and let the browser decide what image has to be used based on DPR and screen resolution.
+        -->
+
+        <img
+            class="meal"
+            src="../Images/meal.jpg"
+            alt="A bowl of salmon and curry."
+            srcset="
+                ../Images/meal.jpg     400w,
+                ../Images/meal@2x.jpg  800w,
+                ../Images/meal@3x.jpg 1200w
+            "
+            sizes="
+                (max-width: 500px) 100vw,
+                (max-width: 700px) 50vw,
+                33vw
+            "
+        />
+        <!--
+        - We use w to represent the actual width of the image.
+        - So, here we do not care about the physical resolution of the screen.
+        - We are just telling the size of the image to the browser.
+        - So, we are saying that meal.jpg is 400 x 400px in size.
+
+        - Now, browser know the size of the image so it can display any image according to DPR and resolution of the screen.
+
+        - We can use sizes attribute with media conditions to specify the width of the image on the basis of screen size.
+        - So, we have provided the size of different images and also specified the final size of the image based on screen size.
+        - Using these info, the browser will determine itself that what image should be used.
+
+        - It is not compulsory to provide three versions of the image and in 400, 800, 1200px width.
+        - We can decide what version should we provide using https://www.responsivebreakpoints.com
+        -->
+    </body>
+</html>

@@ -1,0 +1,135 @@
+/*
+• Vertical Spacing:
+1. margin
+2. line-height
+
+• Horizontal Spacing:
+1. letter-spacing
+2. word-spacing
+3. width
+
+• Ideal Line Length
+- The total no. of characters a line should have so that the user can easily read it.
+- It should be between 50 - 70 characters.
+
+• Formatting Text
+1. text-align
+2. text-indent
+3. text-decoration
+4. text-transform
+5. white-space
+6. column-*
+7. direction
+*/
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5; /* 1.5 * 1.5 * 16px = 36px */
+    /*
+    - Using this property, we provide the height of a line.
+    - We can adjust the vertical space between lines and bring them closer or farther.
+    - General rule of thumb: Set line-height 1.5 times the font-size.
+    - If we set line-height to 1.5rem then in future if we have to change font-size then we have to remember to change line-height as well.
+    - So, we set line-height to '1.5'(without any unit).
+    - So, it will be used as a multiplier.
+    - The browser will multiply the font-size to 1.5 to get the value of line height.
+    */
+
+    letter-spacing: 0.5px;
+    /*
+    - Used to set space between the letters.
+    - We should not use rem here. Use pixel instead.
+    - Positive value: space increases 
+    - Negative value: space decreases
+    */
+
+    /* word-spacing: 5px; */
+
+    direction: ltr;
+    /*
+    - Used for languages written from right to left.
+    - Default value is ltr i.e. left to right.
+    */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+    margin: 3rem 0 1rem;
+    /*
+    - We have not given left margin as the browser will pick 0 for that.
+    - Top margin > Bottom margin
+    - We have used rem here because we want the margin relative to font-size.
+    */
+
+    letter-spacing: -1px;
+}
+
+p {
+    width: 50ch;
+    /*
+    - ch is a unit in CSS which is relative to the width of zero character.
+    - So, 50ch is equivalent to 50 zeroes.
+    - We have set it to 50 because some characters like i or 1 take less space.
+    - So, 50ch is almost equivalent to 60 - 70 characters.
+    */
+
+    text-align: left;
+    /*
+    - Sets the horizontal alignment of the text.
+    - Default value is left.
+    - Try to not use justify as it creates white spaces between the words.
+    - For the web, use left or center.
+    */
+
+    /* text-decoration: line-through; */
+    /* line-through is useful for showing prices which are not valid anymore. */
+
+    text-transform: capitalize;
+    /* Convert the text to lowercase, uppercase or capitalize. */
+
+    /* white-space: nowrap; */
+    /*
+    - Used for controlling wrapping.
+    - nowrap: There is no wrap and text is on one line. There is horizontal scrolling.
+    */
+
+    /*
+    - To truncate (shorten or cut off) the text there are four properties we need to set:
+    1. width: to specify a fixed width for the text.
+    2. white-space to nowrap so that text is on one line.
+    3. overflow to hidden.
+    4. text-overflow to ellipsis to add three dots after each paragraph.
+
+    - We can also truncate the text upto some lines using line-clamp.
+    */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 5px solid gold;
+    line-clamp: 3;
+
+    /* For creating column text */
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 3px dotted #999;
+    /* Used to add line between columns */
+}
+
+p + p {
+    text-indent: 2rem;
+    /*
+    - Use to add indentation on the first line of paragraph.
+    - Generally, we want to add space in subsequent paragraph and not the paragraph written after heading.
+    - We can do it by using relational selector (p + p).
+    */
+}
