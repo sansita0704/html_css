@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Submitting the Form</title>
+        <script
+            src="https://kit.fontawesome.com/8cd8a03ea0.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+        <link rel="stylesheet" href="../CSS/dataValidation.css" />
+    </head>
+    <body>
+        <form action="https://formspree.io/f/mqakzddg" method="GET">
+            <!-- So, here we are using an absolute URL pointing to a different website -->
+            <input type="text" placeholder="Name" name="name" />
+            <input type="email" placeholder="Email" name="email" />
+            <!-- <input type="button" value="Submit" /> -->
+            <button type="submit">
+                <span class="fa-solid fa-square-check"></span>
+                Submit
+            </button>
+            <!--
+            - We can add a submit button using button as well as input element.
+            - If we want an icon we have to use button element because between opening and closing tag we can write HTML code and add an icon.
+            - But inside value attribute we can't write HTML code.
+            - Also, using input field of type submit is conceptually wrong because input field are used to take input but submit button is not taking any input.
+            - Now, to submit the form, each input field should have a name attribute.
+
+            • Attributes for submitting the form
+            1. action: It contains the URL where all the data will be sent.
+            - Behind this URL, there is a server-side technology.
+            e.g. - Node/Express: for JS developers
+            - Django: for python developers
+
+            2. method: means how we are sending the data.
+            'POST': The value of the fields like name and email will be included in the body of the HTTP request sent to the backend (formspree.io)
+            'GET': The fields are not included in the body of the request.
+            - Instead, they are appended to the target URL.
+            - So, when we submit the URL then the name and value pairs are added to the URL after question mark.
+            - This is used when we want to bookmark the URL and use it whenever we want to.
+
+            - Most of the times we use POST method.
+            - Go to https://formspree.io/f/mqakzddg to create backend for free!
+            -->
+        </form>
+    </body>
+</html>

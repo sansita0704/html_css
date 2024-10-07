@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data Validation</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+        <link rel="stylesheet" href="../CSS/dataValidation.css" />
+    </head>
+    <body>
+        <!--
+        - When submitting the forms, we need data validation.
+        - For example,
+        1. We need all the required fields to be filled.
+        2. We need all email and date fields to have a valid email and date.
+        3. We want fields like price aur age to not have a negative value.
+
+        • required: boolean attribute to mark the field as a required field.
+        - So, if the user submits the form without filling this field there will be an error.
+        - We can change this error message using JS.
+        • minlength: To limit the user to enter a min. no. of characters.
+        • maxlength
+        - We should always use maxlength otherwise the hacker can enter a really long string with thousands of characters and can wreck the website.
+
+        - For email fields, we set type to email to validate the field.
+        - For date fields, we set type to date to validate the field.
+
+        - For numbers, use min and mix attribute to set the range of values.
+        - We should always validate number field, especially when we don't want to allow negative values as negative values can easily cause data corruption.
+        -->
+
+        <form>
+            <input type="text" required minlength="3" />
+            <input type="email" />
+            <input type="date" />
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

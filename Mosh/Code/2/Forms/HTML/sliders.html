@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sliders</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        />
+    </head>
+    <body>
+        <div><input type="range" min="0" max="100" value="90" /></div>
+        <!--
+        - Sometimes we need a slider for the user to select a numeric value.
+        - We can use JS to read the value of the slider and then we can submit it to server.
+        -->
+
+        <div><input type="file" accept=".jpg, .png" /></div>
+        <br />
+        <div><input type="file" accept="image/*" /></div>
+        <!--
+        - When we need the user to select one or more files then we use the type as file for input element.
+
+        • Attributes:
+        - multiple: To allow the user to select multiple files.
+        - accept: To limit the user to select specific types of files.
+        - To allow multiple file types, separate them with comma.
+        - 'image/*' - To allow any type of image file.
+        - 'video/*' and 'audio/*'
+        -->
+    </body>
+</html>
