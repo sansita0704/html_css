@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: gold;
+    transition: transform 0.5s linear 1s;
+    /*
+    - We use transition property to animate one or more properties of an element.
+    - We use transition property for the div but not for its hover state.
+    - Syntax: 'name-of-property' 'duration-of-transition' 'timing-function(optional)' 'delay(optional)'
+    - By default, the timing function is linear do transition occurs at a linear rate.
+    - ease-in: transition starts slowly and then progresses quickly.
+    - ease-out: opposite of ease-in.
+
+    - We can add a custom curve using cubic-bezier().
+    - Go to https://cubic-bezier.com/#.17,.67,1,.43 to create custom curves. 
+    */
+
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+.box:hover {
+    transform: rotate(45deg);
+    background-color: dodgerblue;
+}

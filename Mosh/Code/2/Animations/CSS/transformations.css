@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* To align the div at the center of the screen */
+
+    height: 100vh;
+    /*
+    - body element grows automatically to fit in the item.
+    - So, the height of body = height of the div.
+    - Hence, it is not centered vertically.
+    - So, we give body element a height of 100vh.
+    */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: gold;
+}
+
+.box:hover {
+    transform: rotate(-15deg);
+    /*
+    - transform is a property and rotate is a function.
+    - 15deg: Clockwise
+    - -15deg: Anti-Clockwise
+    */
+
+    transform: scale(2);
+    transform: scale(0.5);
+    transform: skew(15deg);
+    transform: skew(-15deg);
+    /*
+    - 15deg: tilts 15deg to the left.
+    - -15deg: tilts 15deg to the right.
+    */
+
+    transform: translate(10px, 10px);
+    /*
+    - translate() is a shorthand of translateX() and translateY().
+    - Single value (10px): Moves 10px towards right along horizontal axis.
+    - Two values (10px, 10px): Moves 10px along horizontal and 10px along vertical axis.
+    - This is much easier than using position property to position elements.
+    - Also, it uses hardware acceleration so we get better performance while moving elements.
+    */
+
+    transform: translateX(50px) rotate(45deg);
+    transform: rotate(45deg) translateX(50px);
+    /*
+    - When combining different functions together, the order of these functions matter.
+    - So, in the first line, first we are translating it 50px along horizontal and then rotating it.
+    - In the second line, we are doing reverse of it.
+    */
+
+    transform: perspective(200px) translateZ(50px);
+    /*
+    - To move the box along z-axis, we use translateZ().
+    - But before using this function, we need to use perspective() to define the distance between us and the element.
+    - It can hold any arbitrary value.
+
+    - 50px: towards us
+    - -50px: away from us
+    */
+
+    transform: rotate(45deg);
+    /* Rotates the element along z-axis */
+
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+    /*
+    - By default, the origin/center of transformation is at the center of the div.
+    - But we can change it using transform-origin property.
+    - Here, we give two values: One for x-offset and one for y-offset.
+    - 0 0: top-left corner of the element.
+    */
+}
+
+.container:hover {
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+}
+
+/*
+- To apply different transformations to different elements in a container, we apply the transformation of individual elements.
+*/
+
+/*
+.container:hover .box {
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+}
+*/
+/*
+- Using above CSS code, we get some weird transformation because both these boxes have a different perspective.
+- To correct this, we use perspective property for the container element.
+*/
+
+.container {
+    perspective: 200px;
+}
+/* Now, all the child elements of container element have the same perspective of 200px. */
+
+.container:hover .box {
+    transform: rotateY(45deg);
+    transform-origin: 0 50%;
+}
+
+/* Using this new implementation, we can apply different transformation to different elements. */
+
+.container:hover .box-special {
+    transform: rotateX(45deg);
+}
