@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Best Practices</title>
+        <link rel="stylesheet" href="../CSS/bestPractices.css" />
+    </head>
+    <body>
+        <!--
+        • 8 Best Practices
+
+        1. Following a naming convention.
+            - Kebab Case: separate multiple words using a hyphen.
+            e.g. - nav-bar
+            - Camel Case: first letter of first word is small but first letter of every word that comes after is capital.
+            e.g. - navBar
+            - Pascal Case: first letter of every word is capital.
+            e.g. - NavBar
+            - Separate each word using an underscore.
+            e.g. - nav_bar
+
+        2. Create logical sections in the stylesheet.
+            - For large projects, we separate our stylesheet into multiple sections and then combine them.
+            - But for smaller projects, we separate one style sheet into some logical sections.
+            - We can do this by adding comments for every type of style.
+
+            e.g. - Basic Styles (for *, html and body)
+            Typography (h1, h2, h3)
+            Forms (For all the input fields)
+            Navigation Bar
+
+        3. Avoid over-specific selectors.
+        4. Avoid !important keyword as much as possible.
+
+        5. Sort CSS properties: Search Sort Lines Ascending in command pallete.
+
+        6. Take advantage of style inheritance.
+            - We can set font-family for nav-bar so that it is inherited by anchor and li elements.
+            - Hence, we do not have to apply it separately for both the elements.
+
+        7. Extract repetitive patterns from the stylesheet. (Object-Oriented CSS)
+
+        8. Avoid repetitive values (Keep it DRY)
+            - Use CSS variables or custom properties or global variables to keep the code dry.
+        -->
+
+        <div class="nav-bar">
+            <a href="#" class="brand">My Website</a>
+            <ul class="items">
+                <li class="nav-item">Link 1</li>
+                <li class="nav-item">Link 2</li>
+                <li class="nav-item">Link 3</li>
+            </ul>
+        </div>
+        <!--
+        - To style these li elements we should not use a selctor like 'div.nav-bar > ul.items > li'
+        - The specificity of this selector is 23.
+        - As we add more and more over-specific selectors, it will be hard to maintain our code over time.
+
+        - To reduce its specificity:
+
+        1. Avoid using direct child selectors as much as possible because if in future, we wrap the ul element inside a div then our styles would break.
+        div.nav-bar ul.items li
+
+        2. We should not write the name of HTML element as if in future, we change the element to nav then our styles would break.
+        .nav-bar .items li
+        - For li element, we can give it a class of item so it doesn.t matter we write li or another type of element in the future.
+        .nav-bar .items .item
+
+        3. We don't need '.items'.
+        - As soon as the element with the class of item is inside nav-bar our rule will work.
+        .nav-bar .item
+
+        4. Here, if we have a general rule for the elements with the class of item.
+        - e.g. - We have a background color for item, then we have to undo that style for our item inside nav-bar.
+        - To prevent this, we can use a more specific class for our item inside nav-bar like 'nav-item'
+        .nav-bar .nav-item
+
+        5. Now, we do not have to add nav-bar also because we will not use this class anywhere outside nav-bar.
+        .nav-item
+
+        - Now the specificity becomes 10.
+        -->
+
+        <div class="one"></div>
+        <br />
+        <div class="two"></div>
+        <!--
+        - We can use CSS variables to store values of some properies that we can reuse throughout our code.
+        - We define them using ':root' pseudo-class selector.
+        - It matches the html element.
+        - We start by adding two hyphens and then give the custom property a name.
+        - We can access them using var().
+
+        - So all the properties get inherited by all the elements and are accessible using var function.
+        -->
+
+    </body>
+</html>
