@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BEM</title>
+    </head>
+    <body>
+        <!--
+        • BEM - Block Element Modifier
+        - It is a popular naming convention.
+        - Its idea is to think of our webpage as a bunch of blocks or components or modules.
+        - These blocks can contain elements or other blocks. 
+        - These blocks can be modified to create different version of the same block and then we can compose all of them to create complex web pages.
+        - We use modifier to create different versions of our block.
+        - Blocks can have header, footer or side-bar.
+
+        - BEM Naming Convention:
+        For element: .block-name__element-name
+        For modifier: .block-name--modifier-name
+        -->
+
+        <div class="card card--popular ">
+            <header class="card__header">
+                <span class="card__price"></span>
+            </header>
+            <!--
+            - We want to give this header a class so that we do not have to use element type selector in stylesheet.
+            - But we do not want any generic name like header otherwise the styles applied to some other header on the webpage will leak into it.
+            - So we prefix it with the block name.
+
+            - For span, card__header__price would be too long so we only write card__price because the price is the part of card.
+            -->
+
+            <div class="card__body">
+                <button class="btn"></button>
+                <!--
+                - Here, we do not give it a class like card__btn.
+                - This is because button is a independent block which can exist outside of this block.
+                - So, we do not add a prefix.
+                -->
+
+                <!--
+
+                -->
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Object Oriented CSS</title>
+        <link rel="stylesheet" href="../CSS/objectOrientedCSS.css" />
+    </head>
+    <body>
+        <!--
+        - Object Oriented Programming is a set of principles for creating reusable components.
+        - Object Oriented CSS is based on 2 basic principles:
+
+        1. Separate container and content.
+        - Here, hero or side-bar is the container and btn is the content.
+        - So, we remove the the side-bar and hero class selector.
+        - Now, the button will be same whether it is on side-bar, header, footer, etc.
+
+        2. Separate structure and skin.
+        - Structure means layout(size, positioning and spacing) and skin means visual appearance (like colors, borders, typography).
+        - So, it says to separate the styles that are related to the layout and those that define the look and feel of an element.
+
+        - Here, we define two more classes to define two different skins (background-color).
+        - We name the classes as primary and secondary instead of color name so that if in future, we need to change the color of the buttons, we do not have to change the name of the class.
+        -->
+
+        <header class="hero">
+            <button class="btn btn-primary">Sign Up</button>
+        </header>
+        <aside class="side-bar">
+            <button class="btn btn-secondary">Contact</button>
+        </aside>
+    </body>
+</html>
