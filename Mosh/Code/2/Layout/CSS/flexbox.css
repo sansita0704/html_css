@@ -13,7 +13,7 @@ Types of axes:
 
 1. Direction: row
     main axis - left to right
-    cross axis - top to bottom 
+    cross axis - top to bottom
 2. Direction: column
     main axis - top to bottom
     cross axis - left to right
@@ -42,15 +42,15 @@ Properties to align items:
     height: 90vh;
 
     /* flex-wrap: wrap; */
-    /* 
-    - Flex items always try to remain inside the flex container. 
+    /*
+    - Flex items always try to remain inside the flex container.
     - In order to do that they can sometimes resize themselves.
     - We can prevent this resizing using flex-wrap property.
     - Default value is nowrap.
     */
 
     /* align-content: center; */
-    /* 
+    /*
     - This property only works when we have more than one line of elements inside the flex container.
     - Used to align mutiple lines of elements as content as a whole.
     */
@@ -58,14 +58,14 @@ Properties to align items:
 
 .box {
     flex-basis: auto;
-    /* 
+    /*
     - Sizes the items along main axis.
     - Overwrites height or width property.
     */
 
     flex-grow: 0;
-    /* 
-    - Determines the growth factor for items
+    /*
+    - Determines the growth factor for items.
     - This property allows flex items to grow and take up empty space available.
     - By default, it is set to 0.
     - When it is set to 1 for all items, then all of them will grow equally.
@@ -101,5 +101,5 @@ Properties to align items:
     /* flex-grow: 2; */
 
     flex-shrink: 0;
-    /* Now, this item will not shrink */
+    /* Now, this item will not shrink. */
 }
