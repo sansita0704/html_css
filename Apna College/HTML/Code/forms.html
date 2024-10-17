@@ -12,10 +12,10 @@
             <!--
             - Forms are used to collect data from the user.    
             - 'action' attribute contains the URL to which the data of the form will be sent when the form is submitted.
-
-            - Elements in forms:
+            • Elements in forms:
             - 'input' used to take different type of inputs from user.
             -->
+
             <input type="text" placeholder="Enter name" />
             <br /><br />
             <input type="password" placeholder="Enter password" />
@@ -25,12 +25,13 @@
             <br />
             <input type="radio" value="12th" name="class" />12th
             <!-- 
-            - 'name' attribute defines what data we are taking as input (eg: class, username, etc.)
-            - Value attribute holds the actual data associated with name (eg: 11th, Sansita)            
-            - Radio buttons with same 'name' value are grouped together and hence it allows to select only one option out of multiple options 
+            - 'name' attribute defines what data we are taking as input (eg: class, username, etc.).
+            - Value attribute holds the actual data associated with name (eg: 11th, Sansita).
+            - Radio buttons with same 'name' value are grouped together and hence it allows to select only one option out of multiple options.
              
-            - When we want class of a student we will write name = "class" and value = "11th". In this way the student can select any one option and when the form will be submitted the name and value will be sent to server in pair i.e class = 11th 
-            - Value and data which is displayed on webpage using label tag both should be same because the server can't see the data which is displayed instead the data which is written in value attribute is sent to server
+            - When we want class of a student we will write name = "class" and value = "11th".
+            - In this way the student can select any one option and when the form will be submitted the name and value will be sent to server in pair i.e class = 11th.
+            - Value and data which is displayed on webpage using label tag both should be same because the server can't see the data which is displayed instead the data which is written in value attribute is sent to server.
             -->
 
             <br /><br />
@@ -39,10 +40,10 @@
             </label>
             <input type="number" id="percentage" name="percentage" />
             <!--
-            Labels are used to provide labels or assign a name to a particular input element.
-            Here, the label tag is associated with the input element using 'for' attribute.
-            'id' attribute assigns an identifier to an element 
-            The value of 'for' attribute and 'id' attribute should be same. 
+            - Labels are used to provide labels or assign a name to a particular input element.
+            - Here, the label tag is associated with the input element using 'for' attribute.
+            - 'id' attribute assigns an identifier to an element 
+            - The value of 'for' attribute and 'id' attribute should be same. 
 
             Uses: 
             1. Screen readers announces the labels to the visually impaired users so that they can understand the purpose of that element.
@@ -50,8 +51,8 @@
 
             - Placeholder attribute should be used when we want to give brief hint to user about the input element whereas Label tag should be used to give more descriptive info 
             -->
-
             <br />
+
             <!-- Labels with radio buttons -->
             <h4>Select your gender:</h4>
             <input type="radio" name="gender" id="male" />
@@ -91,7 +92,7 @@
             </select>
             <br /><br /><br />
 
-            <!-- To provide an area or box where user can write feedback, we can use textarea tag -->
+            <!-- To provide an area or box where user can write feedback, we can use textarea tag. -->
             <textarea
                 name="feedback"
                 id="feedback"
